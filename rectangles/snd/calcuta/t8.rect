@@ -1,0 +1,17 @@
+p/src/androidTest/java/com/iwsbrazil/calcuta/ExampleInstrumentedTest.java 0.0000000000 0.0000000000 1000.0000000000 55.9139784946
+p/src/main/AndroidManifest.xml 0.0000000000 55.9139784946 52.1327014218 907.5268817204
+p/src/main/java/com/iwsbrazil/calcuta/adapter/RecyclerAdapter.java 109.0047393365 55.9139784946 154.0284360190 907.5268817204
+p/src/main/java/com/iwsbrazil/calcuta/CalcutaApplication.java 52.1327014218 55.9139784946 56.8720379147 907.5268817204
+p/src/main/java/com/iwsbrazil/calcuta/view/fragment/FragmentEventsActivity.java 263.0331753555 315.2073732719 159.2417061611 648.2334869432
+p/src/main/java/com/iwsbrazil/calcuta/view/fragment/FragmentMyEventsActivity.java 422.2748815166 315.2073732719 159.2417061611 648.2334869432
+p/src/main/java/com/iwsbrazil/calcuta/view/fragment/FragmentRankingActivity.java 581.5165876777 315.2073732719 162.5592417062 648.2334869432
+p/src/main/java/com/iwsbrazil/calcuta/view/MainActivity.java 263.0331753555 55.9139784946 481.0426540284 259.2933947773
+p/src/main/res/drawable/white_black_gradient.xml 744.0758293839 55.9139784946 255.9241706161 67.2242134608
+p/src/main/res/layout/activity_event_recycler_view.xml 744.0758293839 123.1381919554 176.3033175355 378.1362007168
+p/src/main/res/layout/activity_main.xml 920.3791469194 123.1381919554 79.6208530806 378.1362007168
+p/src/main/res/values-w820dp/dimens.xml 744.0758293839 501.2743926722 255.9241706161 50.4181600956
+p/src/main/res/values/colors.xml 744.0758293839 551.6925527678 67.8982493471 411.7483074472
+p/src/main/res/values/dimens.xml 811.9740787310 551.6925527678 26.1147112874 411.7483074472
+p/src/main/res/values/strings.xml 838.0887900184 551.6925527678 78.3441338621 411.7483074472
+p/src/main/res/values/styles.xml 916.4329238805 551.6925527678 83.5670761195 411.7483074472
+p/src/test/java/com/iwsbrazil/calcuta/ExampleUnitTest.java 0.0000000000 963.4408602151 1000.0000000000 36.5591397849

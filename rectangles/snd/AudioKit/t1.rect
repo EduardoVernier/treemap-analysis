@@ -1,0 +1,186 @@
+dioKit/AudioKit/AudioKit.h 0.0000000000 0.0000000000 1000.0000000000 2.5961113566
+dioKit/AudioKit/Internals/AKBufferedAudioBus.hpp 0.0000000000 2.5961113566 21.0526315789 246.6305788776
+dioKit/AudioKit/Internals/AKDSPKernel.hpp 21.0526315789 2.5961113566 8.0627099664 246.6305788776
+dioKit/AudioKit/Internals/AKDSPKernel.mm 29.1153415454 2.5961113566 17.0212765957 246.6305788776
+dioKit/AudioKit/Internals/AKParameterRamper.hpp 46.1366181411 2.5961113566 19.9328107503 246.6305788776
+dioKit/AudioKit/Internals/Soundpipe/lib/faust/CUI.h 66.0694288914 2.5961113566 276.1622656504 22.0015768207
+dioKit/AudioKit/Internals/Soundpipe/lib/inih/ini.c 342.2316945418 2.5961113566 657.7683054582 15.5354645490
+dioKit/AudioKit/Internals/Soundpipe/lib/inih/ini.h 342.2316945418 18.1315759056 657.7683054582 6.4661122717
+dioKit/AudioKit/Internals/Soundpipe/modules/allpass.c 66.0694288914 24.5976881773 16.7221230279 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/atone.c 82.7915519193 24.5976881773 17.5582291793 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/base.c 100.3497810986 24.5976881773 52.9533895884 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/butbp.c 153.3031706870 24.5976881773 23.6896742895 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/butbr.c 176.9928449765 24.5976881773 21.7387599363 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/buthp.c 198.7316049128 24.5976881773 24.2470783905 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/butlp.c 222.9786833032 24.5976881773 23.4109722391 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/clip.c 246.3896555423 24.5976881773 31.4933317026 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/comb.c 277.8829872449 24.5976881773 17.0008250784 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/dcblock.c 294.8838123232 24.5976881773 14.2138045737 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/decimator.c 309.0976168970 24.5976881773 11.9841881700 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/delay.c 321.0818050670 24.5976881773 14.2138045737 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/dist.c 335.2956096407 24.5976881773 20.3452496840 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/eqfil.c 355.6408593246 24.5976881773 20.9026537849 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/fofilt.c 376.5435131095 24.5976881773 24.5257804409 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/fold.c 401.0692935505 24.5976881773 14.7712086747 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/fosc.c 415.8405022251 24.5976881773 28.1489070970 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/ftbl.c 443.9894093221 24.5976881773 71.0690228686 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/jcrev.c 515.0584321907 24.5976881773 91.1355705021 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/lpf18.c 606.1940026928 24.5976881773 27.0340988951 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/mode.c 633.2281015879 24.5976881773 24.2470783905 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/moogladder.c 657.4751799784 24.5976881773 27.8702050465 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/noise.c 685.3453850249 24.5976881773 8.0823594635 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/osc.c 693.4277444884 24.5976881773 20.0665476335 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/pareq.c 713.4942921219 24.5976881773 32.0507358035 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/phasor.c 745.5450279253 24.5976881773 14.7712086747 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/randmt.c 760.3162366000 24.5976881773 37.9034788633 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/revsc.c 798.2197154633 24.5976881773 76.9217659284 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/rms.c 875.1414813916 24.5976881773 16.7221230279 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/scale.c 891.8636044195 24.5976881773 8.0823594635 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/streson.c 899.9459638830 24.5976881773 22.8535681381 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/tbvcf.c 922.7995320212 24.5976881773 31.2146296521 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/tone.c 954.0141616733 24.5976881773 18.9517394316 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/modules/vdelay.c 972.9659011049 24.5976881773 27.0340988951 198.1916234578
+dioKit/AudioKit/Internals/Soundpipe/soundpipe.h 66.0694288914 222.7893116351 933.9305711086 26.4373785991
+dioKit/AudioKit/Operations/Analysis/AKTrackedAmplitude/AKTrackedAmplitudeAudioUnit.h 0.0000000000 249.2266902342 1.4731369151 637.4281926646
+dioKit/AudioKit/Operations/Analysis/AKTrackedAmplitude/AKTrackedAmplitudeAudioUnit.mm 1.4731369151 249.2266902342 18.4575389948 637.4281926646
+dioKit/AudioKit/Operations/Analysis/AKTrackedAmplitude/AKTrackedAmplitudeDSPKernel.hpp 19.9306759099 249.2266902342 9.5320623917 637.4281926646
+dioKit/AudioKit/Operations/Math/AKLinearTransformation/AKLinearTransformationAudioUnit.h 29.4627383016 249.2266902342 1.4731369151 637.4281926646
+dioKit/AudioKit/Operations/Math/AKLinearTransformation/AKLinearTransformationAudioUnit.mm 30.9358752166 249.2266902342 22.3570190641 637.4281926646
+dioKit/AudioKit/Operations/Math/AKLinearTransformation/AKLinearTransformationDSPKernel.hpp 53.2928942808 249.2266902342 13.6915077990 637.4281926646
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKFMOscillator/AKFMOscillatorAudioUnit.h 66.9844020797 249.2266902342 52.2921957792 17.9571537843
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKFMOscillator/AKFMOscillatorAudioUnit.mm 66.9844020797 267.1838440185 52.2921957792 288.3707637126
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKFMOscillator/AKFMOscillatorDSPKernel.hpp 66.9844020797 555.5546077312 52.2921957792 189.0782663171
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKOscillator/AKOscillatorAudioUnit.h 119.2765978589 249.2266902342 42.0344516178 22.3392708882
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKOscillator/AKOscillatorAudioUnit.mm 119.2765978589 271.5659611224 42.0344516178 299.6090448531
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKOscillator/AKOscillatorDSPKernel.hpp 119.2765978589 571.1750059754 42.0344516178 173.4578680728
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKPhasor/AKPhasorAudioUnit.h 161.3110494767 249.2266902342 37.9090545094 24.7703091907
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKPhasor/AKPhasorAudioUnit.mm 161.3110494767 273.9969994249 37.9090545094 310.3574033894
+dioKit/AudioKit/Operations/Signal Generators/Oscillators/AKPhasor/AKPhasorDSPKernel.hpp 161.3110494767 584.3544028143 37.9090545094 160.2784712340
+dioKit/AudioKit/Operations/Signal Generators/Random Generators/AKWhiteNoise/AKWhiteNoiseAudioUnit.h 66.9844020797 744.6328740482 132.2357019064 7.1011004425
+dioKit/AudioKit/Operations/Signal Generators/Random Generators/AKWhiteNoise/AKWhiteNoiseAudioUnit.mm 66.9844020797 751.7339744908 132.2357019064 88.9726114270
+dioKit/AudioKit/Operations/Signal Generators/Random Generators/AKWhiteNoise/AKWhiteNoiseDSPKernel.hpp 66.9844020797 840.7065859177 132.2357019064 45.9482969811
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKDelay/AKDelayAudioUnit.h 199.2201039861 249.2266902342 400.3899480069 2.3452611785
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKDelay/AKDelayAudioUnit.mm 199.2201039861 251.5719514127 400.3899480069 29.3847430013
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKDelay/AKDelayDSPKernel.hpp 199.2201039861 280.9566944140 400.3899480069 15.1752193903
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKVariableDelay/AKVariableDelayAudioUnit.h 599.6100519931 249.2266902342 400.3899480069 2.3452611785
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKVariableDelay/AKVariableDelayAudioUnit.mm 599.6100519931 251.5719514127 400.3899480069 29.3847430013
+dioKit/AudioKit/Operations/Signal Modifiers/Delays/AKVariableDelay/AKVariableDelayDSPKernel.hpp 599.6100519931 280.9566944140 400.3899480069 15.1752193903
+dioKit/AudioKit/Operations/Signal Modifiers/Effects/AKDistortion/AKDistortionAudioUnit.h 199.2201039861 296.1319138044 800.7798960139 1.1726305893
+dioKit/AudioKit/Operations/Signal Modifiers/Effects/AKDistortion/AKDistortionAudioUnit.mm 199.2201039861 297.3045443936 800.7798960139 17.7963936487
+dioKit/AudioKit/Operations/Signal Modifiers/Effects/AKDistortion/AKDistortionDSPKernel.hpp 199.2201039861 315.1009380423 800.7798960139 10.8985666531
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKClipper/AKClipperAudioUnit.h 199.2201039861 325.9995046954 43.0250625765 21.8249305194
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKClipper/AKClipperAudioUnit.mm 199.2201039861 347.8244352148 43.0250625765 311.9681244832
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKClipper/AKClipperDSPKernel.hpp 199.2201039861 659.7925596980 43.0250625765 182.3023608091
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKCombFilter/AKCombFilterAudioUnit.h 242.2451665627 325.9995046954 36.3893564080 25.8047707906
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKCombFilter/AKCombFilterAudioUnit.mm 242.2451665627 351.8042754860 36.3893564080 323.3185987291
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKCombFilter/AKCombFilterDSPKernel.hpp 242.2451665627 675.1228742151 36.3893564080 166.9720462920
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDCBlock/AKDCBlockAudioUnit.h 278.6345229707 325.9995046954 32.7504207672 28.6719675451
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDCBlock/AKDCBlockAudioUnit.mm 278.6345229707 354.6714722405 32.7504207672 333.9440925841
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDCBlock/AKDCBlockDSPKernel.hpp 278.6345229707 688.6155648246 32.7504207672 153.4793556826
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDecimator/AKDecimatorAudioUnit.h 311.3849437379 325.9995046954 39.7072094923 23.6485770049
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDecimator/AKDecimatorAudioUnit.mm 311.3849437379 349.6480817002 39.7072094923 317.1691504180
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKDecimator/AKDecimatorDSPKernel.hpp 311.3849437379 666.8172321182 39.7072094923 175.2776883889
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKEqualizerFilter/AKEqualizerFilterAudioUnit.h 351.0921532301 325.9995046954 43.0250625765 21.8249305194
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKEqualizerFilter/AKEqualizerFilterAudioUnit.mm 351.0921532301 347.8244352148 43.0250625765 311.9681244832
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKEqualizerFilter/AKEqualizerFilterDSPKernel.hpp 351.0921532301 659.7925596980 43.0250625765 182.3023608091
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKFormantFilter/AKFormantFilterAudioUnit.h 394.1172158067 325.9995046954 43.0250625765 21.8249305194
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKFormantFilter/AKFormantFilterAudioUnit.mm 394.1172158067 347.8244352148 43.0250625765 311.9681244832
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKFormantFilter/AKFormantFilterDSPKernel.hpp 394.1172158067 659.7925596980 43.0250625765 182.3023608091
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighPassFilter/AKHighPassFilterAudioUnit.h 437.1422783832 325.9995046954 36.3893564080 25.8047707906
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighPassFilter/AKHighPassFilterAudioUnit.mm 437.1422783832 351.8042754860 36.3893564080 323.3185987291
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighPassFilter/AKHighPassFilterDSPKernel.hpp 437.1422783832 675.1228742151 36.3893564080 166.9720462920
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighShelfParametricEqualizerFilter/AKHighShelfParametricEqualizerFilterAudioUnit.h 473.5316347912 325.9995046954 43.1320900954 21.7707743643
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighShelfParametricEqualizerFilter/AKHighShelfParametricEqualizerFilterAudioUnit.mm 473.5316347912 347.7702790596 43.1320900954 311.1940100304
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKHighShelfParametricEqualizerFilter/AKHighShelfParametricEqualizerFilterDSPKernel.hpp 473.5316347912 658.9642890901 43.1320900954 183.1306314171
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowPassFilter/AKLowPassFilterAudioUnit.h 516.6637248866 325.9995046954 36.3893564080 25.8047707906
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowPassFilter/AKLowPassFilterAudioUnit.mm 516.6637248866 351.8042754860 36.3893564080 323.3185987291
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowPassFilter/AKLowPassFilterDSPKernel.hpp 516.6637248866 675.1228742151 36.3893564080 166.9720462920
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowShelfParametricEqualizerFilter/AKLowShelfParametricEqualizerFilterAudioUnit.h 553.0530812946 325.9995046954 43.1320900954 21.7707743643
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowShelfParametricEqualizerFilter/AKLowShelfParametricEqualizerFilterAudioUnit.mm 553.0530812946 347.7702790596 43.1320900954 311.1940100304
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKLowShelfParametricEqualizerFilter/AKLowShelfParametricEqualizerFilterDSPKernel.hpp 553.0530812946 658.9642890901 43.1320900954 183.1306314171
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKModalResonanceFilter/AKModalResonanceFilterAudioUnit.h 596.1851713900 325.9995046954 39.7072094923 23.6485770049
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKModalResonanceFilter/AKModalResonanceFilterAudioUnit.mm 596.1851713900 349.6480817002 39.7072094923 317.1691504180
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKModalResonanceFilter/AKModalResonanceFilterDSPKernel.hpp 596.1851713900 666.8172321182 39.7072094923 175.2776883889
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKMoogLadder/AKMoogLadderAudioUnit.h 635.8923808822 325.9995046954 39.7072094923 23.6485770049
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKMoogLadder/AKMoogLadderAudioUnit.mm 635.8923808822 349.6480817002 39.7072094923 317.1691504180
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKMoogLadder/AKMoogLadderDSPKernel.hpp 635.8923808822 666.8172321182 39.7072094923 175.2776883889
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKPeakingParametricEqualizerFilter/AKPeakingParametricEqualizerFilterAudioUnit.h 675.5995903745 325.9995046954 43.1320900954 21.7707743643
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKPeakingParametricEqualizerFilter/AKPeakingParametricEqualizerFilterAudioUnit.mm 675.5995903745 347.7702790596 43.1320900954 311.1940100304
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKPeakingParametricEqualizerFilter/AKPeakingParametricEqualizerFilterDSPKernel.hpp 675.5995903745 658.9642890901 43.1320900954 183.1306314171
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKRolandTB303Filter/AKRolandTB303FilterAudioUnit.h 718.7316804699 325.9995046954 46.3429156608 20.2624066254
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKRolandTB303Filter/AKRolandTB303FilterAudioUnit.mm 718.7316804699 346.2619113208 46.3429156608 307.5118181973
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKRolandTB303Filter/AKRolandTB303FilterDSPKernel.hpp 718.7316804699 653.7737295181 46.3429156608 188.3211909891
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKStringResonator/AKStringResonatorAudioUnit.h 765.0745961307 325.9995046954 39.7072094923 23.6485770049
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKStringResonator/AKStringResonatorAudioUnit.mm 765.0745961307 349.6480817002 39.7072094923 317.1691504180
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKStringResonator/AKStringResonatorDSPKernel.hpp 765.0745961307 666.8172321182 39.7072094923 175.2776883889
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKThreePoleLowpassFilter/AKThreePoleLowpassFilterAudioUnit.h 804.7818056229 325.9995046954 43.0250625765 21.8249305194
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKThreePoleLowpassFilter/AKThreePoleLowpassFilterAudioUnit.mm 804.7818056229 347.8244352148 43.0250625765 311.9681244832
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/AKThreePoleLowpassFilter/AKThreePoleLowpassFilterDSPKernel.hpp 804.7818056229 659.7925596980 43.0250625765 182.3023608091
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandPassButterworthFilter/AKBandPassButterworthFilterAudioUnit.h 847.8068681995 325.9995046954 6.9738092739 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandPassButterworthFilter/AKBandPassButterworthFilterAudioUnit.mm 854.7806774733 325.9995046954 93.5310890850 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandPassButterworthFilter/AKBandPassButterworthFilterDSPKernel.hpp 948.3117665583 325.9995046954 51.6882334417 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandRejectButterworthFilter/AKBandRejectButterworthFilterAudioUnit.h 847.8068681995 460.6488712679 6.9738092739 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandRejectButterworthFilter/AKBandRejectButterworthFilterAudioUnit.mm 854.7806774733 460.6488712679 93.5310890850 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKBandRejectButterworthFilter/AKBandRejectButterworthFilterDSPKernel.hpp 948.3117665583 460.6488712679 51.6882334417 134.6493665726
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKHighPassButterworthFilter/AKHighPassButterworthFilterAudioUnit.h 847.8068681995 595.2982378405 7.6096565900 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKHighPassButterworthFilter/AKHighPassButterworthFilterAudioUnit.mm 855.4165247895 595.2982378405 95.3445208045 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKHighPassButterworthFilter/AKHighPassButterworthFilterDSPKernel.hpp 950.7610455939 595.2982378405 49.2389544061 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKLowPassButterworthFilter/AKLowPassButterworthFilterAudioUnit.h 847.8068681995 718.6965791738 7.6096565900 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKLowPassButterworthFilter/AKLowPassButterworthFilterAudioUnit.mm 855.4165247895 718.6965791738 95.3445208045 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Filters/Butterworth Filters/AKLowPassButterworthFilter/AKLowPassButterworthFilterDSPKernel.hpp 950.7610455939 718.6965791738 49.2389544061 123.3983413333
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKChowningReverb/AKChowningReverbAudioUnit.h 199.2201039861 842.0949205071 379.3167928487 2.4755534662
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKChowningReverb/AKChowningReverbAudioUnit.mm 199.2201039861 844.5704739733 379.3167928487 28.8329168417
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKChowningReverb/AKChowningReverbDSPKernel.hpp 199.2201039861 873.4033908150 379.3167928487 13.2514920838
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKFlatFrequencyResponseReverb/AKFlatFrequencyResponseReverbAudioUnit.h 578.5368968348 842.0949205071 421.4631031652 2.2279981196
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKFlatFrequencyResponseReverb/AKFlatFrequencyResponseReverbAudioUnit.mm 578.5368968348 844.3229186267 421.4631031652 27.9155058512
+dioKit/AudioKit/Operations/Signal Modifiers/Reverbs/AKFlatFrequencyResponseReverb/AKFlatFrequencyResponseReverbDSPKernel.hpp 578.5368968348 872.2384244780 421.4631031652 14.4164584208
+ravis.yml 0.0000000000 886.6548828988 1000.0000000000 0.4971277066
+sts/OSXAudioKit/OSXAudioKit/AKAudioUnitRenderCallback.m 0.0000000000 887.1520106054 843.1372549020 1.8998756538
+sts/OSXAudioKit/OSXAudioKitTests/OSXAudioKit-Bridging-Header.h 0.0000000000 889.0518862592 361.3445378151 0.9171813501
+sts/OSXAudioKit/OSXAudioKitTests/OSXAudioKitTests-Bridging-Header.h 361.3445378151 889.0518862592 481.7927170868 0.9171813501
+sts/travis.sh 843.1372549020 887.1520106054 156.8627450980 2.8170570040
+veloperTools/data2yaml.lua 0.0000000000 889.9690676094 49.1967871486 110.0309323906
+veloperTools/yaml/dev/bal.yaml 49.1967871486 889.9690676094 62.2796864313 26.6072687618
+veloperTools/yaml/dev/drip.yaml 111.4764735799 889.9690676094 141.1672892443 26.6072687618
+veloperTools/yaml/dev/gbuzz.yaml 252.6437628242 889.9690676094 120.4073937672 26.6072687618
+veloperTools/yaml/dev/jitter.yaml 373.0511565914 889.9690676094 78.8876028130 26.6072687618
+veloperTools/yaml/dev/metro.yaml 451.9387594044 889.9690676094 45.6717700496 26.6072687618
+veloperTools/yaml/dev/panst.yaml 497.6105294541 889.9690676094 62.2796864313 26.6072687618
+veloperTools/yaml/dev/port.yaml 559.8902158854 889.9690676094 60.2036968836 26.6072687618
+veloperTools/yaml/dev/randi.yaml 620.0939127690 889.9690676094 83.0395819084 26.6072687618
+veloperTools/yaml/dev/random.yaml 703.1334946774 889.9690676094 56.0517177882 26.6072687618
+veloperTools/yaml/dev/reverse.yaml 759.1852124656 889.9690676094 62.2796864313 26.6072687618
+veloperTools/yaml/dev/tenv.yaml 821.4648988969 889.9690676094 103.7994773855 26.6072687618
+veloperTools/yaml/dev/tenv2.yaml 925.2643762824 889.9690676094 74.7356237176 26.6072687618
+veloperTools/yaml/effects/allpass.yaml 49.1967871486 916.5763363712 34.3663811874 72.3276192325
+veloperTools/yaml/effects/atone.yaml 83.5631683360 916.5763363712 24.4383155110 72.3276192325
+veloperTools/yaml/effects/butbp.yaml 108.0014838470 916.5763363712 32.0752891082 72.3276192325
+veloperTools/yaml/effects/butbr.yaml 140.0767729553 916.5763363712 32.8389864680 72.3276192325
+veloperTools/yaml/effects/buthp.yaml 172.9157594232 916.5763363712 25.2020128708 72.3276192325
+veloperTools/yaml/effects/butlp.yaml 198.1177722940 916.5763363712 25.2020128708 72.3276192325
+veloperTools/yaml/effects/clip.yaml 223.3197851648 916.5763363712 39.7122627054 72.3276192325
+veloperTools/yaml/effects/comb.yaml 263.0320478702 916.5763363712 44.2944468638 72.3276192325
+veloperTools/yaml/effects/dcblock.yaml 307.3264947340 916.5763363712 15.2739471944 72.3276192325
+veloperTools/yaml/effects/decimator.yaml 322.6004419284 916.5763363712 31.3115917485 72.3276192325
+veloperTools/yaml/effects/delay.yaml 353.9120336769 916.5763363712 32.0752891082 72.3276192325
+veloperTools/yaml/effects/dist.yaml 385.9873227851 916.5763363712 43.5307495040 72.3276192325
+veloperTools/yaml/effects/eqfil.yaml 429.5180722892 916.5763363712 41.2396574249 72.3276192325
+veloperTools/yaml/effects/fofilt.yaml 470.7577297140 916.5763363712 38.1848679860 72.3276192325
+veloperTools/yaml/effects/jcrev.yaml 508.9425977000 916.5763363712 20.6198287124 72.3276192325
+veloperTools/yaml/effects/lpf18.yaml 529.5624264125 916.5763363712 38.1848679860 72.3276192325
+veloperTools/yaml/effects/mode.yaml 567.7472943985 916.5763363712 32.0752891082 72.3276192325
+veloperTools/yaml/effects/moogladder.yaml 599.8225835067 916.5763363712 31.3115917485 72.3276192325
+veloperTools/yaml/effects/pareq-high2.yaml 631.1341752552 916.5763363712 43.5307495040 72.3276192325
+veloperTools/yaml/effects/pareq-low1.yaml 674.6649247593 916.5763363712 43.5307495040 72.3276192325
+veloperTools/yaml/effects/pareq-peaking0.yaml 718.1956742633 916.5763363712 43.5307495040 72.3276192325
+veloperTools/yaml/effects/revsc.yaml 761.7264237674 916.5763363712 34.3663811874 72.3276192325
+veloperTools/yaml/effects/rms.yaml 796.0928049548 916.5763363712 25.9657102305 72.3276192325
+veloperTools/yaml/effects/scale.yaml 822.0585151852 916.5763363712 45.8218415832 72.3276192325
+veloperTools/yaml/effects/streson.yaml 867.8803567684 916.5763363712 31.3115917485 72.3276192325
+veloperTools/yaml/effects/tbvcf.yaml 899.1919485170 916.5763363712 43.5307495040 72.3276192325
+veloperTools/yaml/effects/tone.yaml 942.7226980210 916.5763363712 24.4383155110 72.3276192325
+veloperTools/yaml/effects/vdelay.yaml 967.1610135320 916.5763363712 32.8389864680 72.3276192325
+veloperTools/yaml/generators/fosc.yaml 49.1967871486 988.9039556037 462.9565381947 11.0960443963
+veloperTools/yaml/generators/noise.yaml 512.1533253433 988.9039556037 124.4506823104 11.0960443963
+veloperTools/yaml/generators/osc.yaml 636.6040076537 988.9039556037 204.0991189890 11.0960443963
+veloperTools/yaml/generators/phasor.yaml 840.7031266427 988.9039556037 159.2968733573 11.0960443963

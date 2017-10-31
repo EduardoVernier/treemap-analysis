@@ -1,0 +1,382 @@
+ameworks/build_frameworks.sh 0.0000000000 0.0000000000 462.1212121212 2.3358284228
+ameworks/build_packages.sh 462.1212121212 0.0000000000 393.9393939394 2.3358284228
+ameworks/fix-framework.sh 856.0606060606 0.0000000000 136.3636363636 2.3358284228
+ameworks/fix_paths.sed 992.4242424242 0.0000000000 7.5757575758 2.3358284228
+amples/iOS/HelloObjectiveC/HelloObjectiveC/AppDelegate.h 0.0000000000 2.3358284228 1000.0000000000 0.3008263878
+amples/iOS/HelloObjectiveC/HelloObjectiveC/AppDelegate.m 0.0000000000 2.6366548106 1000.0000000000 0.7963051441
+amples/iOS/HelloObjectiveC/HelloObjectiveC/main.m 0.0000000000 4.5831784962 1000.0000000000 0.2831307179
+amples/iOS/HelloObjectiveC/HelloObjectiveC/ViewController.h 0.0000000000 3.4329599547 1000.0000000000 0.2654350480
+amples/iOS/HelloObjectiveC/HelloObjectiveC/ViewController.m 0.0000000000 3.6983950027 1000.0000000000 0.8847834935
+dioKit/.jazzy.yaml 0.0000000000 4.8663092141 3.3831908832 993.7888198758
+dioKit/.swiftlint.yml 3.3831908832 4.8663092141 0.3561253561 993.7888198758
+dioKit/Common/Internals/AudioKit.h 3.7393162393 4.8663092141 2.5245155061 651.8863892451
+dioKit/Common/Internals/CoreAudio/AKBufferedAudioBus.hpp 6.2638317454 4.8663092141 8.0078717667 207.7197308103
+dioKit/Common/Internals/CoreAudio/AKDSPKernel.hpp 6.2638317454 212.5860400244 8.0078717667 79.5522373316
+dioKit/Common/Internals/CoreAudio/AKDSPKernel.mm 6.2638317454 292.1382773560 8.0078717667 167.9436121445
+dioKit/Common/Internals/CoreAudio/AKParameterRamper.hpp 6.2638317454 460.0818895005 8.0078717667 196.6708089587
+dioKit/Common/Internals/EZAudio/EZAudio.h 14.2717035121 4.8663092141 305.6835388635 30.5653151160
+dioKit/Common/Internals/EZAudio/EZAudio.m 14.2717035121 35.4316243301 305.6835388635 17.7718782966
+dioKit/Common/Internals/EZAudio/EZAudioDevice.h 14.2717035121 53.2035026268 305.6835388635 10.8252157703
+dioKit/Common/Internals/EZAudio/EZAudioDevice.m 14.2717035121 64.0287183970 305.6835388635 27.4972058335
+dioKit/Common/Internals/EZAudio/EZAudioDisplayLink.h 14.2717035121 91.5259242306 305.6835388635 5.4415523123
+dioKit/Common/Internals/EZAudio/EZAudioDisplayLink.m 14.2717035121 96.9674765429 305.6835388635 10.4199937895
+dioKit/Common/Internals/EZAudio/EZAudioFFT.h 14.2717035121 107.3874703324 305.6835388635 22.6924309195
+dioKit/Common/Internals/EZAudio/EZAudioFFT.m 14.2717035121 130.0799012519 305.6835388635 25.7026513476
+dioKit/Common/Internals/EZAudio/EZAudioFile.h 14.2717035121 155.7825525994 305.6835388635 21.9977646668
+dioKit/Common/Internals/EZAudio/EZAudioFile.m 14.2717035121 177.7803172663 305.6835388635 42.5483079740
+dioKit/Common/Internals/EZAudio/EZAudioFloatConverter.h 14.2717035121 220.3286252403 305.6835388635 4.3416640790
+dioKit/Common/Internals/EZAudio/EZAudioFloatConverter.m 14.2717035121 224.6702893192 305.6835388635 12.9671033825
+dioKit/Common/Internals/EZAudio/EZAudioFloatData.h 14.2717035121 237.6373927018 305.6835388635 3.0102204281
+dioKit/Common/Internals/EZAudio/EZAudioFloatData.m 14.2717035121 240.6476131299 305.6835388635 4.9205526228
+dioKit/Common/Internals/EZAudio/EZAudioPlayer.h 14.2717035121 245.5681657527 305.6835388635 24.4869854054
+dioKit/Common/Internals/EZAudio/EZAudioPlayer.m 14.2717035121 270.0551511582 305.6835388635 25.7605402019
+dioKit/Common/Internals/EZAudio/EZAudioPlot.h 14.2717035121 295.8156913601 305.6835388635 11.9829928580
+dioKit/Common/Internals/EZAudio/EZAudioPlot.m 14.2717035121 307.7986842181 305.6835388635 26.2236510370
+dioKit/Common/Internals/EZAudio/EZAudioPlotGL.h 14.2717035121 334.0223352551 305.6835388635 14.5301024510
+dioKit/Common/Internals/EZAudio/EZAudioPlotGL.m 14.2717035121 348.5524377061 305.6835388635 31.7230922037
+dioKit/Common/Internals/EZAudio/EZAudioUtilities.h 14.2717035121 380.2755299098 305.6835388635 31.7809810581
+dioKit/Common/Internals/EZAudio/EZAudioUtilities.m 14.2717035121 412.0565109680 305.6835388635 43.0693076635
+dioKit/Common/Internals/EZAudio/EZMicrophone.h 14.2717035121 455.1258186314 305.6835388635 22.0556535212
+dioKit/Common/Internals/EZAudio/EZMicrophone.m 14.2717035121 477.1814721526 305.6835388635 36.8752002441
+dioKit/Common/Internals/EZAudio/EZOutput.h 14.2717035121 514.0566723968 305.6835388635 21.7662092493
+dioKit/Common/Internals/EZAudio/EZOutput.m 14.2717035121 535.8228816460 305.6835388635 43.5903073529
+dioKit/Common/Internals/EZAudio/EZPlot.h 14.2717035121 579.4131889990 305.6835388635 8.2202173229
+dioKit/Common/Internals/EZAudio/EZPlot.m 14.2717035121 587.6334063219 305.6835388635 2.4892207386
+dioKit/Common/Internals/EZAudio/EZRecorder.h 14.2717035121 590.1226270605 305.6835388635 21.0715429966
+dioKit/Common/Internals/EZAudio/EZRecorder.m 14.2717035121 611.1941700571 305.6835388635 26.3973176002
+dioKit/Common/Internals/EZAudio/TPCircularBuffer.c 14.2717035121 637.5914876573 305.6835388635 7.8728841965
+dioKit/Common/Internals/EZAudio/TPCircularBuffer.h 14.2717035121 645.4643718538 305.6835388635 11.2883266053
+dioKit/Common/Internals/Soundpipe/lib/faust/CUI.h 319.9552423756 4.8663092141 1.7026022900 176.6862346834
+dioKit/Common/Internals/Soundpipe/lib/fft/fft.c 321.6578446656 4.8663092141 321.9921389612 176.6862346834
+dioKit/Common/Internals/Soundpipe/lib/inih/ini.c 643.6499836268 4.8663092141 26.2401058811 124.7593641849
+dioKit/Common/Internals/Soundpipe/lib/inih/ini.h 643.6499836268 129.6256733990 26.2401058811 51.9268704986
+dioKit/Common/Internals/Soundpipe/lib/kissfft/_kiss_fft_guts.h 669.8900895079 4.8663092141 91.3396052045 32.5474642838
+dioKit/Common/Internals/Soundpipe/lib/kissfft/kiss_fft.c 669.8900895079 37.4137734979 91.3396052045 79.0438418321
+dioKit/Common/Internals/Soundpipe/lib/kissfft/kiss_fft.h 669.8900895079 116.4576153300 91.3396052045 24.7980680257
+dioKit/Common/Internals/Soundpipe/lib/kissfft/kiss_fftr.c 669.8900895079 141.2556833557 91.3396052045 30.8038501257
+dioKit/Common/Internals/Soundpipe/lib/kissfft/kiss_fftr.h 669.8900895079 172.0595334815 91.3396052045 9.4930104161
+dioKit/Common/Internals/Soundpipe/modules/adsr.c 319.9552423756 181.5525438976 3.8859353353 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/allpass.c 323.8411777109 181.5525438976 2.6495013650 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/atone.c 326.4906790759 181.5525438976 2.7819764332 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/autowah.c 329.2726555091 181.5525438976 9.4940465578 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/bal.c 338.7667020669 181.5525438976 3.3560350623 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/bar.c 342.1227371292 181.5525438976 8.2576125875 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/base.c 350.3803497168 181.5525438976 8.4342460118 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/biquad.c 358.8145957286 181.5525438976 3.6651435549 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/biscale.c 362.4797392835 181.5525438976 1.1922756142 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/bitcrush.c 363.6720148977 181.5525438976 1.8988093116 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/blsaw.c 365.5708242093 181.5525438976 7.6393956023 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/blsquare.c 373.2102198116 181.5525438976 8.1692958753 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/bltriangle.c 381.3795156870 181.5525438976 8.9199879288 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/butbp.c 390.2995036157 181.5525438976 3.6651435549 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/butbr.c 393.9646471706 181.5525438976 3.4443517745 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/buthp.c 397.4089989451 181.5525438976 3.7534602670 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/butlp.c 401.1624592121 181.5525438976 3.6209851988 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/clip.c 404.7834444109 181.5525438976 4.9898942374 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/comb.c 409.7733386483 181.5525438976 3.1352432819 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/conv.c 412.9085819302 181.5525438976 10.8629555964 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/count.c 423.7715375266 181.5525438976 1.9429676676 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/dcblock.c 425.7145051943 181.5525438976 2.2520761602 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/delay.c 427.9665813545 181.5525438976 2.2520761602 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/dist.c 430.2186575147 181.5525438976 3.2235599941 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/dmetro.c 433.4422175088 181.5525438976 1.5455424629 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/drip.c 434.9877599717 181.5525438976 10.2005802552 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/dtrig.c 445.1883402268 181.5525438976 2.2962345163 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/dust.c 447.4845747431 181.5525438976 3.1352432819 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/eqfil.c 450.6198180250 181.5525438976 3.3118767062 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/expon.c 453.9316947313 181.5525438976 3.3560350623 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/fftwrapper.c 457.2877297936 181.5525438976 5.5639528665 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/fofilt.c 462.8516826600 181.5525438976 3.8859353353 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/fold.c 466.7376179953 181.5525438976 2.3403928724 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/foo.c 469.0780108677 181.5525438976 1.5897008190 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/fosc.c 470.6677116867 181.5525438976 4.4599939644 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/ftbl.c 475.1277056511 181.5525438976 11.9227561424 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/gbuzz.c 487.0504617935 181.5525438976 5.2990027300 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/in.c 492.3494645234 181.5525438976 1.2805923264 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/jcrev.c 493.6300568498 181.5525438976 14.4397824391 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/jitter.c 508.0698392889 181.5525438976 3.4885101306 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/line.c 511.5583494195 181.5525438976 2.5170262967 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/lpf18.c 514.0753757162 181.5525438976 4.2833605400 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/maygate.c 518.3587362563 181.5525438976 1.8988093116 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/metro.c 520.2575455678 181.5525438976 2.5170262967 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/mincer.c 522.7745718646 181.5525438976 11.0837473768 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/mode.c 533.8583192414 181.5525438976 3.8417769792 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/moogladder.c 537.7000962206 181.5525438976 4.5041523205 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/noise.c 542.2042485411 181.5525438976 1.2805923264 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/osc.c 543.4848408675 181.5525438976 3.0027682136 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/oscmorph.c 546.4876090811 181.5525438976 3.5768268427 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/padsynth.c 550.0644359238 181.5525438976 5.0340525935 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/pan2.c 555.0984885173 181.5525438976 3.7534602670 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/panst.c 558.8519487843 181.5525438976 3.2235599941 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/pareq.c 562.0755087784 181.5525438976 5.0782109495 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/phaser.c 567.1537197279 181.5525438976 16.3827501068 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/phasor.c 583.5364698347 181.5525438976 2.3403928724 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/pinknoise.c 585.8768627071 181.5525438976 6.0938531394 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/pitchamdf.c 591.9707158465 181.5525438976 15.2346328486 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/pluck.c 607.2053486951 181.5525438976 4.9015775252 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/port.c 612.1069262203 181.5525438976 2.5611846528 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/posc3.c 614.6681108732 181.5525438976 3.8417769792 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/progress.c 618.5098878524 181.5525438976 2.1196010920 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/prop.c 620.6294889444 181.5525438976 10.6863221721 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/randh.c 631.3158111164 181.5525438976 1.6780175312 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/randi.c 632.9938286476 181.5525438976 4.2392021840 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/randmt.c 637.2330308315 181.5525438976 6.0055364273 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/random.c 643.2385672588 181.5525438976 1.3689090386 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/reverse.c 644.6074762974 181.5525438976 1.5013841068 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/revsc.c 646.1088604042 181.5525438976 12.1877062789 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/rms.c 658.2965666831 181.5525438976 2.6495013650 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/rpt.c 660.9460680481 181.5525438976 3.4001934184 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/samphold.c 664.3462614665 181.5525438976 1.2805923264 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/scale.c 665.6268537929 181.5525438976 1.1922756142 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/streson.c 666.8191294071 181.5525438976 3.6209851988 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/switch.c 670.4401146059 181.5525438976 1.5897008190 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tabread.c 672.0298154249 181.5525438976 3.4001934184 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tadsr.c 675.4300088433 181.5525438976 6.7120701246 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tbvcf.c 682.1420789679 181.5525438976 4.9457358813 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tenv.c 687.0878148492 181.5525438976 3.7534602670 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tenv2.c 690.8412751162 181.5525438976 2.9586098576 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tenvx.c 693.7998849738 181.5525438976 4.0625687596 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tevent.c 697.8624537334 181.5525438976 1.7663342433 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/thresh.c 699.6287879767 181.5525438976 2.9586098576 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tin.c 702.5873978343 181.5525438976 1.3689090386 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tone.c 703.9563068729 181.5525438976 3.0027682136 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/trand.c 706.9590750865 181.5525438976 1.4572257507 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/tseq.c 708.4163008372 181.5525438976 1.6338591751 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/vdelay.c 710.0501600123 181.5525438976 4.2833605400 400.7320797075
+dioKit/Common/Internals/Soundpipe/modules/zitarev.c 714.3335205524 181.5525438976 46.8961741601 400.7320797075
+dioKit/Common/Internals/Soundpipe/soundpipe.h 319.9552423756 582.2846236051 441.2744523368 50.5276113711
+dioKit/Common/Internals/Soundpipe/test/md5.c 319.9552423756 632.8122349762 289.7480491056 23.9404634830
+dioKit/Common/Internals/Soundpipe/test/md5.h 609.7032914812 632.8122349762 68.7412463439 23.9404634830
+dioKit/Common/Internals/Soundpipe/test/test.c 678.4445378251 632.8122349762 65.0454804115 23.9404634830
+dioKit/Common/Internals/Soundpipe/test/test.h 743.4900182366 632.8122349762 17.7396764759 23.9404634830
+dioKit/Common/Internals/Sporth/func.c 761.2296947124 4.8663092141 228.7808245752 6.8839450217
+dioKit/Common/Internals/Sporth/h/plumber.h 761.2296947124 11.7502542358 88.9326053987 26.0661738462
+dioKit/Common/Internals/Sporth/h/sporth.h 850.1623001111 11.7502542358 54.9888628801 26.0661738462
+dioKit/Common/Internals/Sporth/h/ugens.h 905.1511629912 11.7502542358 84.8593562964 26.0661738462
+dioKit/Common/Internals/Sporth/hash.c 761.2296947124 37.8164280820 228.7808245752 6.7292496279
+dioKit/Common/Internals/Sporth/parse.c 761.2296947124 44.5456777099 228.7808245752 17.1711887058
+dioKit/Common/Internals/Sporth/plumber.c 761.2296947124 61.7168664157 228.7808245752 45.6351411550
+dioKit/Common/Internals/Sporth/stack.c 761.2296947124 107.3520075708 228.7808245752 7.7347696873
+dioKit/Common/Internals/Sporth/ugens/allpass.c 761.2296947124 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/atone.c 763.2551710974 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/autowah.c 765.1173026125 115.0867772581 2.1888212547 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/bal.c 767.3061238672 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/basic.c 769.3316002522 115.0867772581 35.1844849447 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/biscale.c 804.5160851968 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/bitcrush.c 806.5415615818 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/blsaw.c 808.5670379667 115.0867772581 1.8948004891 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/blsquare.c 810.4618384558 115.0867772581 2.2541592026 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/bltriangle.c 812.7159976584 115.0867772581 1.8948004891 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/buthp.c 814.6107981475 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/butlp.c 816.4729296627 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/clip.c 818.3350611779 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/comb.c 820.1971926931 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/conv.c 822.2226690780 115.0867772581 2.3521661244 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/count.c 824.5748352024 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/dcblock.c 826.6003115873 115.0867772581 1.5027728017 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/delay.c 828.1030843891 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/dist.c 830.1285607740 115.0867772581 2.3521661244 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/dmetro.c 832.4807268984 115.0867772581 1.9274694631 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/expon.c 834.4081963615 115.0867772581 2.0908143328 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/f.c 836.4990106943 115.0867772581 2.1888212547 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/fm.c 838.6878319490 115.0867772581 2.9075386816 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gbuzz.c 841.5953706306 115.0867772581 2.9075386816 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gen_line.c 844.5029093122 115.0867772581 1.9601384370 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gen_padsynth.c 846.4630477492 115.0867772581 2.3521661244 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gen_sine.c 848.8152138737 115.0867772581 1.6661176715 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gen_sinesum.c 850.4813315451 115.0867772581 1.9601384370 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/gen_vals.c 852.4414699822 115.0867772581 2.0908143328 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/in.c 854.5322843150 115.0867772581 1.0780761404 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/jcrev.c 855.6103604554 115.0867772581 1.6987866454 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/jitter.c 857.3091471008 115.0867772581 2.2214902286 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/line.c 859.5306373294 115.0867772581 2.0908143328 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/maygate.c 861.6214516623 115.0867772581 1.9274694631 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/maytrig.c 863.5489211253 115.0867772581 1.9601384370 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/metro.c 865.5090595624 115.0867772581 1.4047658799 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/mincer.c 866.9138254422 115.0867772581 2.6461868900 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/mode.c 869.5600123322 115.0867772581 2.0581453589 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/moogladder.c 871.6181576911 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/noise.c 873.6436340760 115.0867772581 1.5354417757 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/osc.c 875.1790758517 115.0867772581 2.7115248379 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/oscmorph.c 877.8906006896 115.0867772581 6.7951465817 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/p.c 884.6857472713 115.0867772581 2.5808489421 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/pan.c 887.2665962134 115.0867772581 1.9928074110 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/phasor.c 889.2594036244 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/pinknoise.c 891.1215351395 115.0867772581 1.7641245933 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/pluck.c 892.8856597329 115.0867772581 2.7441938118 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/poly.c 895.6298535447 115.0867772581 10.4214026902 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/poly/poly.c 906.0512562349 115.0867772581 12.2181962575 446.0778174598
+dioKit/Common/Internals/Sporth/ugens/poly/poly.h 906.0512562349 561.1645947178 12.2181962575 95.5881037414
+dioKit/Common/Internals/Sporth/ugens/port.c 918.2694524924 115.0867772581 1.7641245933 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/prop.c 920.0335770857 115.0867772581 1.9928074110 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/randh.c 922.0263844967 115.0867772581 2.0908143328 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/randi.c 924.1171988295 115.0867772581 2.0581453589 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/reverse.c 926.1753441884 115.0867772581 1.8294625412 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/revsc.c 928.0048067296 115.0867772581 2.4175040723 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/rms.c 930.4223108020 115.0867772581 1.6987866454 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/rpt.c 932.1210974474 115.0867772581 2.4828420202 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/samphold.c 934.6039394676 115.0867772581 1.8621315152 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/scale.c 936.4660709828 115.0867772581 2.0908143328 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/streson.c 938.5568853156 115.0867772581 2.0581453589 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/switch.c 940.6150306745 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/t.c 942.6405070595 115.0867772581 7.1871742691 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tabread.c 949.8276813286 115.0867772581 2.7115248379 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tadsr.c 952.5392061664 115.0867772581 2.3848350984 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tblrec.c 954.9240412648 115.0867772581 2.5808489421 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tenv.c 957.5048902069 115.0867772581 2.1234833068 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tenv2.c 959.6283735137 115.0867772581 2.0581453589 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tenvx.c 961.6865188726 115.0867772581 2.2214902286 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/thresh.c 963.9080091012 115.0867772581 1.9601384370 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tick.c 965.8681475382 115.0867772581 1.5027728017 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tin.c 967.3709203400 115.0867772581 1.6987866454 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tog.c 969.0697069854 115.0867772581 1.5354417757 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tone.c 970.6051487611 115.0867772581 1.8294625412 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tphasor.c 972.4346113023 115.0867772581 2.1561522807 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/trand.c 974.5907635830 115.0867772581 2.0254763849 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/tseq.c 976.6162399680 115.0867772581 2.8095317597 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/vdelay.c 979.4257717277 115.0867772581 2.5155109942 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/zeros.c 981.9412827219 115.0867772581 1.6007797236 541.6659212011
+dioKit/Common/Internals/Sporth/ugens/zitarev.c 983.5420624455 115.0867772581 6.4684568422 541.6659212011
+dioKit/Common/Internals/Testing/AKTesterAudioUnit.h 990.0105192877 4.8663092141 9.9894807123 38.9714689223
+dioKit/Common/Internals/Testing/AKTesterAudioUnit.mm 990.0105192877 43.8377781364 9.9894807123 391.4861196281
+dioKit/Common/Internals/Testing/AKTesterDSPKernel.hpp 990.0105192877 435.3238977645 9.9894807123 221.4288006947
+dioKit/Common/Nodes/Analysis/Amplitude Tracker/AKAmplitudeTrackerAudioUnit.h 3.7393162393 656.7526984592 2.1398956214 173.6575670090
+dioKit/Common/Nodes/Analysis/Amplitude Tracker/AKAmplitudeTrackerAudioUnit.mm 5.8792118607 656.7526984592 23.3350522521 173.6575670090
+dioKit/Common/Nodes/Analysis/Amplitude Tracker/AKAmplitudeTrackerDSPKernel.hpp 29.2142641128 656.7526984592 13.7564718517 173.6575670090
+dioKit/Common/Nodes/Analysis/Frequency Tracker/AKFrequencyTrackerAudioUnit.h 3.7393162393 830.4102654682 2.4190955863 168.2448636217
+dioKit/Common/Nodes/Analysis/Frequency Tracker/AKFrequencyTrackerAudioUnit.mm 6.1584118256 830.4102654682 23.5598874489 168.2448636217
+dioKit/Common/Nodes/Analysis/Frequency Tracker/AKFrequencyTrackerDSPKernel.hpp 29.7182992745 830.4102654682 13.2524366900 168.2448636217
+dioKit/Common/Nodes/Effects/AudioKit Operation-Based Effect/AKOperationEffectAudioUnit.h 42.9707359645 656.7526984592 36.3679126746 11.1911951242
+dioKit/Common/Nodes/Effects/AudioKit Operation-Based Effect/AKOperationEffectAudioUnit.mm 79.3386486391 656.7526984592 355.7730587729 11.1911951242
+dioKit/Common/Nodes/Effects/AudioKit Operation-Based Effect/AKOperationEffectDSPKernel.hpp 435.1117074120 656.7526984592 227.6947576147 11.1911951242
+dioKit/Common/Nodes/Effects/Delay/Variable Delay/AKVariableDelayAudioUnit.h 42.9707359645 667.9438935834 619.8357290622 0.5709793431
+dioKit/Common/Nodes/Effects/Delay/Variable Delay/AKVariableDelayAudioUnit.mm 42.9707359645 668.5148729264 619.8357290622 6.8517521168
+dioKit/Common/Nodes/Effects/Delay/Variable Delay/AKVariableDelayDSPKernel.hpp 42.9707359645 675.3666250433 619.8357290622 4.6249326789
+dioKit/Common/Nodes/Effects/Distortion/Bit Crusher/AKBitCrusherAudioUnit.h 42.9707359645 679.9915577222 192.0551615049 1.8427695180
+dioKit/Common/Nodes/Effects/Distortion/Bit Crusher/AKBitCrusherAudioUnit.mm 42.9707359645 681.8343272401 192.0551615049 22.1132342157
+dioKit/Common/Nodes/Effects/Distortion/Bit Crusher/AKBitCrusherDSPKernel.hpp 42.9707359645 703.9475614559 192.0551615049 13.7286329089
+dioKit/Common/Nodes/Effects/Distortion/Clipper/AKClipperAudioUnit.h 235.0258974694 679.9915577222 206.6119096874 1.7129380292
+dioKit/Common/Nodes/Effects/Distortion/Clipper/AKClipperAudioUnit.mm 235.0258974694 681.7044957514 206.6119096874 21.8399598725
+dioKit/Common/Nodes/Effects/Distortion/Clipper/AKClipperDSPKernel.hpp 235.0258974694 703.5444556238 206.6119096874 14.1317387410
+dioKit/Common/Nodes/Effects/Distortion/Tanh Distortion/AKTanhDistortionAudioUnit.h 441.6378071568 679.9915577222 221.1686578699 1.6001968850
+dioKit/Common/Nodes/Effects/Distortion/Tanh Distortion/AKTanhDistortionAudioUnit.mm 441.6378071568 681.5917546072 221.1686578699 21.6026579480
+dioKit/Common/Nodes/Effects/Distortion/Tanh Distortion/AKTanhDistortionDSPKernel.hpp 441.6378071568 703.1944125552 221.1686578699 14.4817818096
+dioKit/Common/Nodes/Effects/Envelopes/Amplitude Envelope/AKAmplitudeEnvelopeAudioUnit.h 42.9707359645 717.6761943648 619.8357290622 0.5709793431
+dioKit/Common/Nodes/Effects/Envelopes/Amplitude Envelope/AKAmplitudeEnvelopeAudioUnit.mm 42.9707359645 718.2471737079 619.8357290622 7.6796721643
+dioKit/Common/Nodes/Effects/Envelopes/Amplitude Envelope/AKAmplitudeEnvelopeDSPKernel.hpp 42.9707359645 725.9268458722 619.8357290622 5.2244609891
+dioKit/Common/Nodes/Effects/Filters/Auto Wah/AKAutoWahAudioUnit.h 42.9707359645 731.1513068613 36.5341889869 9.6871836273
+dioKit/Common/Nodes/Effects/Filters/Auto Wah/AKAutoWahAudioUnit.mm 42.9707359645 740.8384904886 36.5341889869 123.5115912484
+dioKit/Common/Nodes/Effects/Filters/Auto Wah/AKAutoWahDSPKernel.hpp 42.9707359645 864.3500817370 36.5341889869 79.9192649254
+dioKit/Common/Nodes/Effects/Filters/Band Pass Butterworth Filter/AKBandPassButterworthFilterAudioUnit.h 79.5049249514 731.1513068613 33.9601893083 10.4214200392
+dioKit/Common/Nodes/Effects/Filters/Band Pass Butterworth Filter/AKBandPassButterworthFilterAudioUnit.mm 79.5049249514 741.5727269005 33.9601893083 125.0570404701
+dioKit/Common/Nodes/Effects/Filters/Band Pass Butterworth Filter/AKBandPassButterworthFilterDSPKernel.hpp 79.5049249514 866.6297673706 33.9601893083 77.6395792919
+dioKit/Common/Nodes/Effects/Filters/Band Reject Butterworth Filter/AKBandRejectButterworthFilterAudioUnit.h 113.4651142597 731.1513068613 33.9601893083 10.4214200392
+dioKit/Common/Nodes/Effects/Filters/Band Reject Butterworth Filter/AKBandRejectButterworthFilterAudioUnit.mm 113.4651142597 741.5727269005 33.9601893083 125.0570404701
+dioKit/Common/Nodes/Effects/Filters/Band Reject Butterworth Filter/AKBandRejectButterworthFilterDSPKernel.hpp 113.4651142597 866.6297673706 33.9601893083 77.6395792919
+dioKit/Common/Nodes/Effects/Filters/DC Block/AKDCBlockAudioUnit.h 147.4253035680 731.1513068613 28.5630932080 12.3905837094
+dioKit/Common/Nodes/Effects/Filters/DC Block/AKDCBlockAudioUnit.mm 147.4253035680 743.5418905707 28.5630932080 130.1011289484
+dioKit/Common/Nodes/Effects/Filters/DC Block/AKDCBlockDSPKernel.hpp 147.4253035680 873.6430195190 28.5630932080 70.6263271434
+dioKit/Common/Nodes/Effects/Filters/Equalizer Filter/AKEqualizerFilterAudioUnit.h 175.9883967760 731.1513068613 36.5341889869 9.6871836273
+dioKit/Common/Nodes/Effects/Filters/Equalizer Filter/AKEqualizerFilterAudioUnit.mm 175.9883967760 740.8384904886 36.5341889869 123.5115912484
+dioKit/Common/Nodes/Effects/Filters/Equalizer Filter/AKEqualizerFilterDSPKernel.hpp 175.9883967760 864.3500817370 36.5341889869 79.9192649254
+dioKit/Common/Nodes/Effects/Filters/Formant Filter/AKFormantFilterAudioUnit.h 212.5225857629 731.1513068613 36.5341889869 9.6871836273
+dioKit/Common/Nodes/Effects/Filters/Formant Filter/AKFormantFilterAudioUnit.mm 212.5225857629 740.8384904886 36.5341889869 123.5115912484
+dioKit/Common/Nodes/Effects/Filters/Formant Filter/AKFormantFilterDSPKernel.hpp 212.5225857629 864.3500817370 36.5341889869 79.9192649254
+dioKit/Common/Nodes/Effects/Filters/High Pass Butterworth Filter/AKHighPassButterworthFilterAudioUnit.h 249.0567747498 731.1513068613 31.3861896297 11.2760867620
+dioKit/Common/Nodes/Effects/Filters/High Pass Butterworth Filter/AKHighPassButterworthFilterAudioUnit.mm 249.0567747498 742.4273936233 31.3861896297 126.8559760721
+dioKit/Common/Nodes/Effects/Filters/High Pass Butterworth Filter/AKHighPassButterworthFilterDSPKernel.hpp 249.0567747498 869.2833696954 31.3861896297 74.9859769671
+dioKit/Common/Nodes/Effects/Filters/High Shelf Parametric Equalizer Filter/AKHighShelfParametricEqualizerFilterAudioUnit.h 280.4429643795 731.1513068613 36.6172212346 9.6652172245
+dioKit/Common/Nodes/Effects/Filters/High Shelf Parametric Equalizer Filter/AKHighShelfParametricEqualizerFilterAudioUnit.mm 280.4429643795 740.8165240858 36.6172212346 123.2315196129
+dioKit/Common/Nodes/Effects/Filters/High Shelf Parametric Equalizer Filter/AKHighShelfParametricEqualizerFilterDSPKernel.hpp 280.4429643795 864.0480436987 36.6172212346 80.2213029637
+dioKit/Common/Nodes/Effects/Filters/Low Pass Butterworth Filter/AKLowPassButterworthFilterAudioUnit.h 317.0601856141 731.1513068613 31.3861896297 11.2760867620
+dioKit/Common/Nodes/Effects/Filters/Low Pass Butterworth Filter/AKLowPassButterworthFilterAudioUnit.mm 317.0601856141 742.4273936233 31.3861896297 126.8559760721
+dioKit/Common/Nodes/Effects/Filters/Low Pass Butterworth Filter/AKLowPassButterworthFilterDSPKernel.hpp 317.0601856141 869.2833696954 31.3861896297 74.9859769671
+dioKit/Common/Nodes/Effects/Filters/Low Shelf Parametric Equalizer Filter/AKLowShelfParametricEqualizerFilterAudioUnit.h 348.4463752438 731.1513068613 36.6172212346 9.6652172245
+dioKit/Common/Nodes/Effects/Filters/Low Shelf Parametric Equalizer Filter/AKLowShelfParametricEqualizerFilterAudioUnit.mm 348.4463752438 740.8165240858 36.6172212346 123.2315196129
+dioKit/Common/Nodes/Effects/Filters/Low Shelf Parametric Equalizer Filter/AKLowShelfParametricEqualizerFilterDSPKernel.hpp 348.4463752438 864.0480436987 36.6172212346 80.2213029637
+dioKit/Common/Nodes/Effects/Filters/Modal Resonance Filter/AKModalResonanceFilterAudioUnit.h 385.0635964784 731.1513068613 33.9601893083 10.4214200392
+dioKit/Common/Nodes/Effects/Filters/Modal Resonance Filter/AKModalResonanceFilterAudioUnit.mm 385.0635964784 741.5727269005 33.9601893083 125.0570404701
+dioKit/Common/Nodes/Effects/Filters/Modal Resonance Filter/AKModalResonanceFilterDSPKernel.hpp 385.0635964784 866.6297673706 33.9601893083 77.6395792919
+dioKit/Common/Nodes/Effects/Filters/Moog Ladder/AKMoogLadderAudioUnit.h 419.0237857867 731.1513068613 34.7905117853 12.2072385566
+dioKit/Common/Nodes/Effects/Filters/Moog Ladder/AKMoogLadderAudioUnit.mm 419.0237857867 743.3585454179 34.7905117853 125.1241952054
+dioKit/Common/Nodes/Effects/Filters/Moog Ladder/AKMoogLadderDSPKernel.hpp 419.0237857867 868.4827406234 34.7905117853 75.7866060391
+dioKit/Common/Nodes/Effects/Filters/Peaking Parametric Equalizer Filter/AKPeakingParametricEqualizerFilterAudioUnit.h 453.8142975720 731.1513068613 36.6172212346 9.6652172245
+dioKit/Common/Nodes/Effects/Filters/Peaking Parametric Equalizer Filter/AKPeakingParametricEqualizerFilterAudioUnit.mm 453.8142975720 740.8165240858 36.6172212346 123.2315196129
+dioKit/Common/Nodes/Effects/Filters/Peaking Parametric Equalizer Filter/AKPeakingParametricEqualizerFilterDSPKernel.hpp 453.8142975720 864.0480436987 36.6172212346 80.2213029637
+dioKit/Common/Nodes/Effects/Filters/Roland TB-303 Filter/AKRolandTB303FilterAudioUnit.h 490.4315188066 731.1513068613 39.1081886655 9.0495982930
+dioKit/Common/Nodes/Effects/Filters/Roland TB-303 Filter/AKRolandTB303FilterAudioUnit.mm 490.4315188066 740.2009051543 39.1081886655 122.1695769561
+dioKit/Common/Nodes/Effects/Filters/Roland TB-303 Filter/AKRolandTB303FilterDSPKernel.hpp 490.4315188066 862.3704821104 39.1081886655 81.8988645520
+dioKit/Common/Nodes/Effects/Filters/String Resonator/AKStringResonatorAudioUnit.h 529.5397074721 731.1513068613 33.9601893083 10.4214200392
+dioKit/Common/Nodes/Effects/Filters/String Resonator/AKStringResonatorAudioUnit.mm 529.5397074721 741.5727269005 33.9601893083 125.0570404701
+dioKit/Common/Nodes/Effects/Filters/String Resonator/AKStringResonatorDSPKernel.hpp 529.5397074721 866.6297673706 33.9601893083 77.6395792919
+dioKit/Common/Nodes/Effects/Filters/Three Pole Low Pass Filter/AKThreePoleLowpassFilterAudioUnit.h 563.4998967804 731.1513068613 36.5341889869 9.6871836273
+dioKit/Common/Nodes/Effects/Filters/Three Pole Low Pass Filter/AKThreePoleLowpassFilterAudioUnit.mm 563.4998967804 740.8384904886 36.5341889869 123.5115912484
+dioKit/Common/Nodes/Effects/Filters/Three Pole Low Pass Filter/AKThreePoleLowpassFilterDSPKernel.hpp 563.4998967804 864.3500817370 36.5341889869 79.9192649254
+dioKit/Common/Nodes/Effects/Filters/Tone Complement Filter/AKToneComplementFilterAudioUnit.h 600.0340857674 731.1513068613 31.3861896297 11.2760867620
+dioKit/Common/Nodes/Effects/Filters/Tone Complement Filter/AKToneComplementFilterAudioUnit.mm 600.0340857674 742.4273936233 31.3861896297 126.8559760721
+dioKit/Common/Nodes/Effects/Filters/Tone Complement Filter/AKToneComplementFilterDSPKernel.hpp 600.0340857674 869.2833696954 31.3861896297 74.9859769671
+dioKit/Common/Nodes/Effects/Filters/Tone Filter/AKToneFilterAudioUnit.h 631.4202753970 731.1513068613 31.3861896297 11.2760867620
+dioKit/Common/Nodes/Effects/Filters/Tone Filter/AKToneFilterAudioUnit.mm 631.4202753970 742.4273936233 31.3861896297 126.8559760721
+dioKit/Common/Nodes/Effects/Filters/Tone Filter/AKToneFilterDSPKernel.hpp 631.4202753970 869.2833696954 31.3861896297 74.9859769671
+dioKit/Common/Nodes/Effects/Reverb/Chowning Reverb/AKChowningReverbAudioUnit.h 42.9707359645 944.2693466624 111.9283416259 3.1619640946
+dioKit/Common/Nodes/Effects/Reverb/Chowning Reverb/AKChowningReverbAudioUnit.mm 42.9707359645 947.4313107571 111.9283416259 33.2006229935
+dioKit/Common/Nodes/Effects/Reverb/Chowning Reverb/AKChowningReverbDSPKernel.hpp 42.9707359645 980.6319337506 111.9283416259 18.0231953393
+dioKit/Common/Nodes/Effects/Reverb/Comb Filter Reverb/AKCombFilterReverbAudioUnit.h 154.8990775905 944.2693466624 125.9193843292 2.9511664883
+dioKit/Common/Nodes/Effects/Reverb/Comb Filter Reverb/AKCombFilterReverbAudioUnit.mm 154.8990775905 947.2205131507 125.9193843292 32.1817678964
+dioKit/Common/Nodes/Effects/Reverb/Comb Filter Reverb/AKCombFilterReverbDSPKernel.hpp 154.8990775905 979.4022810471 125.9193843292 19.2528480428
+dioKit/Common/Nodes/Effects/Reverb/Convolution/AKConvolutionAudioUnit.h 280.8184619196 944.2693466624 121.0387880373 3.5087601566
+dioKit/Common/Nodes/Effects/Reverb/Convolution/AKConvolutionAudioUnit.mm 280.8184619196 947.7781068190 121.0387880373 31.7250397494
+dioKit/Common/Nodes/Effects/Reverb/Convolution/AKConvolutionDSPKernel.hpp 280.8184619196 979.5031465684 121.0387880373 19.1519825215
+dioKit/Common/Nodes/Effects/Reverb/Costello Reverb/AKCostelloReverbAudioUnit.h 401.8572499570 944.2693466624 135.0298307406 2.6210015628
+dioKit/Common/Nodes/Effects/Reverb/Costello Reverb/AKCostelloReverbAudioUnit.mm 401.8572499570 946.8903482252 135.0298307406 31.4520187532
+dioKit/Common/Nodes/Effects/Reverb/Costello Reverb/AKCostelloReverbDSPKernel.hpp 401.8572499570 978.3423669784 135.0298307406 20.3127621115
+dioKit/Common/Nodes/Effects/Reverb/Flat Frequency Response Reverb/AKFlatFrequencyResponseReverbAudioUnit.h 536.8870806975 944.2693466624 125.9193843292 2.9511664883
+dioKit/Common/Nodes/Effects/Reverb/Flat Frequency Response Reverb/AKFlatFrequencyResponseReverbAudioUnit.mm 536.8870806975 947.2205131507 125.9193843292 32.1817678964
+dioKit/Common/Nodes/Effects/Reverb/Flat Frequency Response Reverb/AKFlatFrequencyResponseReverbDSPKernel.hpp 536.8870806975 979.4022810471 125.9193843292 19.2528480428
+dioKit/Common/Nodes/Generators/AudioKit Operation-Based Generator/AKOperationGeneratorAudioUnit.h 662.8064650267 656.7526984592 16.6561422963 24.4354544864
+dioKit/Common/Nodes/Generators/AudioKit Operation-Based Generator/AKOperationGeneratorAudioUnit.mm 679.4626073230 656.7526984592 149.1811005671 24.4354544864
+dioKit/Common/Nodes/Generators/AudioKit Operation-Based Generator/AKOperationGeneratorDSPKernel.hpp 828.6437078901 656.7526984592 107.9028348762 24.4354544864
+dioKit/Common/Nodes/Generators/Noise/Pink Noise/AKPinkNoiseAudioUnit.h 662.8064650267 681.1881529456 136.8700388698 2.7150504985
+dioKit/Common/Nodes/Generators/Noise/Pink Noise/AKPinkNoiseAudioUnit.mm 662.8064650267 683.9032034440 136.8700388698 26.3747762710
+dioKit/Common/Nodes/Generators/Noise/Pink Noise/AKPinkNoiseDSPKernel.hpp 662.8064650267 710.2779797150 136.8700388698 17.9710485376
+dioKit/Common/Nodes/Generators/Noise/White Noise/AKWhiteNoiseAudioUnit.h 799.6765038965 681.1881529456 136.8700388698 2.7150504985
+dioKit/Common/Nodes/Generators/Noise/White Noise/AKWhiteNoiseAudioUnit.mm 799.6765038965 683.9032034440 136.8700388698 26.3747762710
+dioKit/Common/Nodes/Generators/Noise/White Noise/AKWhiteNoiseDSPKernel.hpp 799.6765038965 710.2779797150 136.8700388698 17.9710485376
+dioKit/Common/Nodes/Generators/Oscillators/FM Oscillator/AKFMOscillatorAudioUnit.h 662.8064650267 728.2490282526 48.5809573139 10.1990323729
+dioKit/Common/Nodes/Generators/Oscillators/FM Oscillator/AKFMOscillatorAudioUnit.mm 662.8064650267 738.4480606255 48.5809573139 103.4473283532
+dioKit/Common/Nodes/Generators/Oscillators/FM Oscillator/AKFMOscillatorDSPKernel.hpp 662.8064650267 841.8953889787 48.5809573139 87.7845286378
+dioKit/Common/Nodes/Generators/Oscillators/Morphing Oscillator/AKMorphingOscillatorAudioUnit.h 711.3874223406 728.2490282526 48.1417081519 10.2920892376
+dioKit/Common/Nodes/Generators/Oscillators/Morphing Oscillator/AKMorphingOscillatorAudioUnit.mm 711.3874223406 738.5411174902 48.1417081519 104.3911908382
+dioKit/Common/Nodes/Generators/Oscillators/Morphing Oscillator/AKMorphingOscillatorDSPKernel.hpp 711.3874223406 842.9323083284 48.1417081519 86.7476092881
+dioKit/Common/Nodes/Generators/Oscillators/Oscillator/AKOscillatorAudioUnit.h 759.5291304925 728.2490282526 44.5398650237 10.7270887827
+dioKit/Common/Nodes/Generators/Oscillators/Oscillator/AKOscillatorAudioUnit.mm 759.5291304925 738.9761170353 44.5398650237 105.6816894887
+dioKit/Common/Nodes/Generators/Oscillators/Oscillator/AKOscillatorDSPKernel.hpp 759.5291304925 844.6578065241 44.5398650237 85.0221110924
+dioKit/Common/Nodes/Generators/Oscillators/Sawtooth/AKSawtoothOscillatorAudioUnit.h 804.0689955162 728.2490282526 42.9585680407 10.2981027282
+dioKit/Common/Nodes/Generators/Oscillators/Sawtooth/AKSawtoothOscillatorAudioUnit.mm 804.0689955162 738.5471309809 42.9585680407 107.1002683734
+dioKit/Common/Nodes/Generators/Oscillators/Sawtooth/AKSawtoothOscillatorDSPKernel.hpp 804.0689955162 845.6473993543 42.9585680407 84.0325182622
+dioKit/Common/Nodes/Generators/Oscillators/Square Wave/AKSquareWaveOscillatorAudioUnit.h 847.0275635569 728.2490282526 46.5604111688 9.8815153273
+dioKit/Common/Nodes/Generators/Oscillators/Square Wave/AKSquareWaveOscillatorAudioUnit.mm 847.0275635569 738.1305435799 46.5604111688 105.6562023456
+dioKit/Common/Nodes/Generators/Oscillators/Square Wave/AKSquareWaveOscillatorDSPKernel.hpp 847.0275635569 843.7867459255 46.5604111688 85.8931716910
+dioKit/Common/Nodes/Generators/Oscillators/Triangle/AKTriangleOscillatorAudioUnit.h 893.5879747257 728.2490282526 42.9585680407 10.2981027282
+dioKit/Common/Nodes/Generators/Oscillators/Triangle/AKTriangleOscillatorAudioUnit.mm 893.5879747257 738.5471309809 42.9585680407 107.1002683734
+dioKit/Common/Nodes/Generators/Oscillators/Triangle/AKTriangleOscillatorDSPKernel.hpp 893.5879747257 845.6473993543 42.9585680407 84.0325182622
+dioKit/Common/Nodes/Generators/Physical Models/Drip/AKDripAudioUnit.h 662.8064650267 929.6799176165 163.1665318111 3.1450961206
+dioKit/Common/Nodes/Generators/Physical Models/Drip/AKDripAudioUnit.mm 662.8064650267 932.8250137371 163.1665318111 35.5721216404
+dioKit/Common/Nodes/Generators/Physical Models/Drip/AKDripDSPKernel.hpp 662.8064650267 968.3971353775 163.1665318111 30.2579937124
+dioKit/Common/Nodes/Generators/Physical Models/Plucked String/AKPluckedStringAudioUnit.h 825.9729968378 929.6799176165 110.5735459286 3.8408470426
+dioKit/Common/Nodes/Generators/Physical Models/Plucked String/AKPluckedStringAudioUnit.mm 825.9729968378 933.5207646591 110.5735459286 38.4084704260
+dioKit/Common/Nodes/Generators/Physical Models/Plucked String/AKPluckedStringDSPKernel.hpp 825.9729968378 971.9292350851 110.5735459286 26.7258940048
+dioKit/Common/Nodes/Mixing/Balancer/AKBalancerAudioUnit.h 936.5465427663 656.7526984592 2.1238494427 166.6377052344
+dioKit/Common/Nodes/Mixing/Balancer/AKBalancerAudioUnit.mm 938.6703922090 656.7526984592 23.8933062302 166.6377052344
+dioKit/Common/Nodes/Mixing/Balancer/AKBalancerDSPKernel.hpp 962.5636984392 656.7526984592 12.9554816004 166.6377052344
+dioKit/Common/Nodes/Mixing/Panner/AKPannerAudioUnit.h 936.5465427663 823.3904036936 2.0193076307 175.2647253964
+dioKit/Common/Nodes/Mixing/Panner/AKPannerAudioUnit.mm 938.5658503971 823.3904036936 22.7172108458 175.2647253964
+dioKit/Common/Nodes/Mixing/Panner/AKPannerDSPKernel.hpp 961.2830612429 823.3904036936 14.2361187967 175.2647253964
+dioKit/Common/Nodes/Playback/Phase-Locked Vocoder/AKPhaseLockedVocoderAudioUnit.h 975.5191800395 656.7526984592 1.3456687505 341.9024306307
+dioKit/Common/Nodes/Playback/Phase-Locked Vocoder/AKPhaseLockedVocoderAudioUnit.mm 976.8648487900 656.7526984592 13.2496615431 341.9024306307
+dioKit/Common/Nodes/Playback/Phase-Locked Vocoder/AKPhaseLockedVocoderDSPKernel.hpp 990.1145103331 656.7526984592 9.8854896669 341.9024306307
+ravis.yml 0.0000000000 998.6551290899 1000.0000000000 0.1592610288
+sts/OSXAudioKit/OSXAudioKit/AKAudioUnitRenderCallback.m 0.0000000000 998.8143901187 641.7910447761 0.7995973618
+sts/OSXAudioKit/OSXAudioKitTests/OSXAudioKit-Bridging-Header.h 0.0000000000 999.6139874805 275.0533049041 0.3860125195
+sts/OSXAudioKit/OSXAudioKitTests/OSXAudioKitTests-Bridging-Header.h 275.0533049041 999.6139874805 366.7377398721 0.3860125195
+sts/travis.sh 641.7910447761 998.8143901187 358.2089552239 1.1856098813

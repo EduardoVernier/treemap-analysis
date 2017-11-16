@@ -1,8 +1,7 @@
 import glob
-
 import pandas as pd
-import re, os
-from collections import defaultdict
+import re
+import os
 from functools import reduce
 
 # Just so I don't keep multiple copies of the raw data

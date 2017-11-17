@@ -1,9 +1,11 @@
 import pandas as pd
 
+
 def q_ar(df):
     ar = df[['id']].copy()
     ar['q_ar'] = df[['w', 'h']].min(axis=1) / df[['w', 'h']].max(axis=1)
     return ar
+
 
 def q_diag(df):
     # Find out max(width, height) of the base rectangle -- should be 1000

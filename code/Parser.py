@@ -36,3 +36,7 @@ def natural_sort(l):
 
 def list_datasets():
     return natural_sort(os.listdir(dataset_dir))
+
+
+def list_techniques():
+    return natural_sort(os.listdir(rectangle_dir))

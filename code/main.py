@@ -3,8 +3,18 @@ import SpatialMetrics
 import TemporalMetrics
 import pandas as pd
 
-# df = Parser.parse_dataset('exo')
 
 
-aggregated_ar('git', 'exo')
-# TemporalMetrics.q_ratio(history[0], history[1])
+#df = Parser.parse_dataset('exo')
+
+#SpatialMetrics.aggregated_ar('git', 'exo')
+
+#history = Parser.parse_rectangles('sqr', 'exo')
+#TemporalMetrics.q_weighted_ratio(history[0], history[1])
+
+import timeit
+start_time = timeit.default_timer()
+TemporalMetrics.aggregated_stab('sqr', 'exo')
+elapsed = timeit.default_timer() - start_time
+print(elapsed)
+

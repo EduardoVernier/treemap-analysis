@@ -9,6 +9,8 @@ def aggregated_stab(technique_id, dataset_id):
     for i in range(1, len(history)):
         df_stab = q_ratio(history[i - 1], history[i])
         df_stab = pd.merge(df_stab, q_weighted_ratio(history[i - 1], history[i]))
+        df_stab = pd.merge(df_stab, q_mod(history[i - 1], history[i]))
+        df_stab = pd.merge(df_stab, q_weighted_mod(history[i - 1], history[i]))
         column = 't' + str(i)
         df_stab[column] = df_stab.mean(axis=1)
         df_mean = pd.concat([df_mean, df_stab[column]], axis=1, ignore_index=True)
@@ -34,7 +36,18 @@ def q_weighted_ratio(df1, df2):
 
 
 def q_mod(df1, df2):
-    pass
+    df = delta_vis(df1, df2)
+    df = pd.merge(df, delta_data_by_area(df1, df2))
+    df['q_mod'] = 1 - abs(df['delta_vis'] - df['delta_data'])
+    return df[['id', 'q_mod']]
+
+
+def q_weighted_mod(df1, df2):
+    df = delta_vis(df1, df2)
+    df = pd.merge(df, delta_data_by_area(df1, df2))
+    df = pd.merge(df, relative_weight(df1, df2))
+    df['q_w_mod'] = df['weight'] * (1 - abs(df['delta_vis'] - df['delta_data']))
+    return df[['id', 'q_w_mod']]
 
 
 def delta_vis(df1, df2):

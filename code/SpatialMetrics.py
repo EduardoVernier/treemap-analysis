@@ -41,6 +41,7 @@ def q_diag(df):
     diag['q_diag'] = 1 - abs(df['w'] - df['h']) / max_dim
     return diag
 
+
 def q_weighted_diag(df):
     # Find out max(width, height) of the base rectangle -- should be 1000
     max_dim = max((df['x'] + df['w']).max(), (df['y'] + df['h']).max())

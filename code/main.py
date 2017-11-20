@@ -12,4 +12,10 @@ import pandas as pd
 #history = Parser.parse_rectangles('sqr', 'exo')
 #TemporalMetrics.q_weighted_ratio(history[0], history[1])
 
+# import timeit
+# start_time = timeit.default_timer()
+# # f
+# elapsed = timeit.default_timer() - start_time
+# print(elapsed)
+
 TemporalMetrics.aggregated_stab('sqr', 'exo')

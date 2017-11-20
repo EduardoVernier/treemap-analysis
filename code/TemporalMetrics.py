@@ -18,19 +18,19 @@ def aggregated_stab(technique_id, dataset_id):
 
 def q_ratio(df1, df2):
     # Create a df with columns delta_vis and delta_data
-    df = delta_vis(df1, df2).copy()
+    df = delta_vis(df1, df2)
     df = pd.merge(df, delta_data_by_area(df1, df2))
     df['q_ratio'] = (1 - df['delta_vis']) / (1 - df['delta_data'])
-    return df[['id', 'q_ratio']].copy()
+    return df[['id', 'q_ratio']]
 
 
 def q_weighted_ratio(df1, df2):
     # Create a df with columns delta_vis, delta_data, and relative_weight
-    df = delta_vis(df1, df2).copy()
+    df = delta_vis(df1, df2)
     df = pd.merge(df, delta_data_by_area(df1, df2))
     df = pd.merge(df, relative_weight(df1, df2))
     df['q_w_ratio'] = df['weight'] * (1 - df['delta_vis']) / (1 - df['delta_data'])
-    return df[['id', 'q_w_ratio']].copy()
+    return df[['id', 'q_w_ratio']]
 
 
 def q_mod(df1, df2):
@@ -45,9 +45,8 @@ def delta_vis(df1, df2):
 
     df = pd.merge(df1, df2, on='id', how='outer')
     df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
-    dv = df[['id']].copy()
-    dv['delta_vis'] = df.apply(lambda r: corner_travel(*list(r)) / norm, axis=1)
-    return dv
+    df['delta_vis'] = df.apply(lambda r: corner_travel(*list(r)) / norm, axis=1)
+    return df[['id', 'delta_vis']]
 
 
 def delta_data_by_area(df1, df2):
@@ -58,9 +57,8 @@ def delta_data_by_area(df1, df2):
 
     df = pd.merge(df1, df2, on='id', how='outer')
     df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
-    dd = df[['id']].copy()
-    dd['delta_data'] = df.apply(lambda r: area_change(*list(r)) / norm, axis=1)
-    return dd
+    df['delta_data'] = df.apply(lambda r: area_change(*list(r)) / norm, axis=1)
+    return df[['id', 'delta_data']]
 
 
 # Given by the average of the two areas
@@ -76,9 +74,8 @@ def relative_weight(df1, df2):
 
     df = pd.merge(df1, df2, on='id', how='outer')
     df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
-    w = df[['id']].copy()
-    w['weight'] = df.apply(lambda r: relative_weight_mean(*list(r), area1, area2), axis=1)
-    return w
+    df['weight'] = df.apply(lambda r: relative_weight_mean(*list(r), area1, area2), axis=1)
+    return df[['id', 'weight']]
 
 
 # If the precision of rectangles is good enough, this shouldn't be necessary

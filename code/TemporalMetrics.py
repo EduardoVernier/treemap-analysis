@@ -1,53 +1,82 @@
 import pandas as pd
 import math
+from scipy import stats
+
 import Parser
 
 
 def aggregated_stab(technique_id, dataset_id):
     history = Parser.parse_rectangles(technique_id, dataset_id)
     df_mean = pd.DataFrame()
+    pearson_list = []
+    weighted_pearson_list = []
     for i in range(1, len(history)):
-        df_stab = q_ratio(history[i - 1], history[i])
-        df_stab = pd.merge(df_stab, q_weighted_ratio(history[i - 1], history[i]))
-        df_stab = pd.merge(df_stab, q_mod(history[i - 1], history[i]))
-        df_stab = pd.merge(df_stab, q_weighted_mod(history[i - 1], history[i]))
+        df = delta_vis(history[i - 1], history[i])
+        df = pd.merge(df, delta_data_by_area(history[i - 1], history[i]))
+        df = pd.merge(df, relative_weight(history[i - 1], history[i]))
+
+        df_stab = q_ratio(df)
+        df_stab = pd.merge(df_stab, q_weighted_ratio(df))
+        df_stab = pd.merge(df_stab, q_mod(df))
+        df_stab = pd.merge(df_stab, q_weighted_mod(df))
+
+        pearson_list.append(pearson(df)[0])
+        weighted_pearson_list.append(weighted_pearson(df))
+
         column = 't' + str(i)
         df_stab[column] = df_stab.mean(axis=1)
         df_mean = pd.concat([df_mean, df_stab[column]], axis=1, ignore_index=True)
-    # Return a dataframe where each column is a revision and each row a cell
-    return df_mean
+    # Return a dataframe where each row is a revision and each column a cell,
+    # list of Pearson correlation coef., and weighted Pearson coefs.
+    return df_mean.T, pearson_list, weighted_pearson_list
 
 
-def q_ratio(df1, df2):
+def q_ratio(df):
     # Create a df with columns delta_vis and delta_data
-    df = delta_vis(df1, df2)
-    df = pd.merge(df, delta_data_by_area(df1, df2))
     df['q_ratio'] = (1 - df['delta_vis']) / (1 - df['delta_data'])
     return df[['id', 'q_ratio']]
 
 
-def q_weighted_ratio(df1, df2):
+def q_weighted_ratio(df):
     # Create a df with columns delta_vis, delta_data, and relative_weight
-    df = delta_vis(df1, df2)
-    df = pd.merge(df, delta_data_by_area(df1, df2))
-    df = pd.merge(df, relative_weight(df1, df2))
     df['q_w_ratio'] = df['weight'] * (1 - df['delta_vis']) / (1 - df['delta_data'])
     return df[['id', 'q_w_ratio']]
 
 
-def q_mod(df1, df2):
-    df = delta_vis(df1, df2)
-    df = pd.merge(df, delta_data_by_area(df1, df2))
+def q_mod(df):
     df['q_mod'] = 1 - abs(df['delta_vis'] - df['delta_data'])
     return df[['id', 'q_mod']]
 
 
-def q_weighted_mod(df1, df2):
-    df = delta_vis(df1, df2)
-    df = pd.merge(df, delta_data_by_area(df1, df2))
-    df = pd.merge(df, relative_weight(df1, df2))
+def q_weighted_mod(df):
     df['q_w_mod'] = df['weight'] * (1 - abs(df['delta_vis'] - df['delta_data']))
     return df[['id', 'q_w_mod']]
+
+
+def pearson(df):
+    return stats.pearsonr(df['delta_vis'], df['delta_data'])
+
+
+# https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Weighted_correlation_coefficient
+def weighted_pearson(df):
+    x = df['delta_data'].values
+    y = df['delta_vis'].values
+    weights = df['weight'].values
+
+    n_items = len(x)
+    weight_sum = sum(weights)
+
+    # Compute vector x and y weighted means
+    x_weighted_mean = sum(weights[i] * x[i] for i in range(n_items)) / weight_sum
+    y_weighted_mean = sum(weights[i] * x[i] for i in range(n_items)) / weight_sum
+
+    # Compute weighted covariance
+    xy_weighted_covariance = sum(weights[i] * (x[i] - x_weighted_mean) * (y[i] - y_weighted_mean) for i in range(n_items)) / weight_sum
+    xx_weighted_covariance = sum(weights[i] * (x[i] - x_weighted_mean) * (x[i] - x_weighted_mean) for i in range(n_items)) / weight_sum
+    yy_weighted_covariance = sum(weights[i] * (y[i] - y_weighted_mean) * (y[i] - y_weighted_mean) for i in range(n_items)) / weight_sum
+
+    weighted_correlation = xy_weighted_covariance / math.sqrt(xx_weighted_covariance * yy_weighted_covariance)
+    return weighted_correlation
 
 
 def delta_vis(df1, df2):

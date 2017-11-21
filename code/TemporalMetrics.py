@@ -20,8 +20,8 @@ def aggregated_stab(technique_id, dataset_id):
         df_stab = pd.merge(df_stab, q_mod(df))
         df_stab = pd.merge(df_stab, q_weighted_mod(df))
 
-        pearson_list.append(pearson(df)[0])
-        weighted_pearson_list.append(weighted_pearson(df))
+        pearson_list.append(max(pearson(df)[0], 0))
+        weighted_pearson_list.append(max(weighted_pearson(df), 0))
 
         column = 't' + str(i)
         df_stab[column] = df_stab.mean(axis=1)

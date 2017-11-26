@@ -5,30 +5,30 @@ from scipy import stats
 import Parser
 
 
-def aggregated_stab(technique_id, dataset_id):
-    history = Parser.parse_rectangles(technique_id, dataset_id)
-    df_mean = pd.DataFrame()
-    pearson_list = []
-    weighted_pearson_list = []
-    for i in range(1, len(history)):
-        df = delta_vis(history[i - 1], history[i])
-        df = pd.merge(df, delta_data_by_area(history[i - 1], history[i]))
-        df = pd.merge(df, relative_weight(history[i - 1], history[i]))
+# def aggregated_stab(technique_id, dataset_id):
+#     history = Parser.parse_rectangles(technique_id, dataset_id)
+#     df_mean = pd.DataFrame()
+#     pearson_list = []
+#     weighted_pearson_list = []
+#     for i in range(1, len(history)):
+#         df = delta_vis(history[i - 1], history[i])
+#         df = pd.merge(df, delta_data_by_area(history[i - 1], history[i]))
+#         df = pd.merge(df, relative_weight(history[i - 1], history[i]))
 
-        df_stab = q_ratio(df)
-        df_stab = pd.merge(df_stab, q_weighted_ratio(df))
-        df_stab = pd.merge(df_stab, q_mod(df))
-        df_stab = pd.merge(df_stab, q_weighted_mod(df))
+#         df_stab = q_ratio(df)
+#         df_stab = pd.merge(df_stab, q_weighted_ratio(df))
+#         df_stab = pd.merge(df_stab, q_mod(df))
+#         df_stab = pd.merge(df_stab, q_weighted_mod(df))
 
-        pearson_list.append(max(pearson(df)[0], 0))
-        weighted_pearson_list.append(max(weighted_pearson(df), 0))
+#         pearson_list.append(max(pearson(df)[0], 0))
+#         weighted_pearson_list.append(max(weighted_pearson(df), 0))
 
-        column = 't' + str(i)
-        df_stab[column] = df_stab.mean(axis=1)
-        df_mean = pd.concat([df_mean, df_stab[column]], axis=1, ignore_index=True)
-    # Return a dataframe where each row is a revision and each column a cell,
-    # list of Pearson correlation coef., and weighted Pearson coefs.
-    return df_mean.T, pearson_list, weighted_pearson_list
+#         column = 't' + str(i)
+#         df_stab[column] = df_stab.mean(axis=1)
+#         df_mean = pd.concat([df_mean, df_stab[column]], axis=1, ignore_index=True)
+#     # Return a dataframe where each row is a revision and each column a cell,
+#     # list of Pearson correlation coef., and weighted Pearson coefs.
+#     return df_mean.T, pearson_list, weighted_pearson_list
 
 
 def q_ratio(df):

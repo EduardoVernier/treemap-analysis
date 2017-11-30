@@ -170,12 +170,12 @@ def relative_weight_mean(*args):
 def relative_position_change_wrapper(df1, df2):
     df = pd.merge(df1, df2, on='id', how='inner')  # Retain only rows in both sets
     df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
-    l1 = df[['x1', 'y1', 'w1', 'h1']]
+    l1 = df[['x1', 'y1', 'w1', 'h1']].copy()
     l1['w1'] = df['x1'] + df['w1']
     l1['h1'] = df['y1'] + df['h1']
     l1.columns = ['x1', 'y1', 'x2', 'y2']
 
-    l2 = df[['x2', 'y2', 'w2', 'h2']]
+    l2 = df[['x2', 'y2', 'w2', 'h2']].copy()
     l2['w2'] = df['x2'] + df['w2']
     l2['h2'] = df['y2'] + df['h2']
     l2.columns = ['x1', 'y1', 'x2', 'y2']
@@ -188,12 +188,12 @@ def getRelativeScore(listR1, listR2):
     stability = 0
 
     for i, r1 in listR1.iterrows():
-        for j, r2 in listR2.iterrows():
+        for j, r2 in listR1.iterrows():
             if (i != j):
-                oldPercentage = getRelativePositions(r1['x1'], r1['x2'], r1['y1'], r1['y2'], r2['x1'], r2['x2'],
-                                                     r2['y1'], r2['y2'])
-                newPercentage = getRelativePositions(r1['x1'], r1['x2'], r1['y1'], r1['y2'], r2['x1'], r2['x2'],
-                                                     r2['y1'], r2['y2'])
+                oldPercentage = getRelativePositions(r1['x1'], r1['x2'], r1['y1'], r1['y2'],
+                                                     r2['x1'], r2['x2'], r2['y1'], r2['y2'])
+                newPercentage = getRelativePositions(listR2.iloc[i]['x1'], listR2.iloc[i]['x2'], listR2.iloc[i]['y1'], listR2.iloc[i]['y2'],
+                                                     listR2.iloc[j]['x1'], listR2.iloc[j]['x2'], listR2.iloc[j]['y1'], listR2.iloc[j]['y2'])
                 itemStability = getQuadrantStability(oldPercentage, newPercentage)
                 stability += itemStability
 

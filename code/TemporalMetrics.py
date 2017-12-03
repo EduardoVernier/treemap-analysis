@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import math
 from scipy import stats
 
@@ -34,23 +35,24 @@ import Parser
 def q_ratio(df):
     # Create a df with columns delta_vis and delta_data
     df['q_ratio'] = (1 - df['delta_vis']) / (1 - df['delta_data'])
-    return df[['id', 'q_ratio']]
+    return df[['q_ratio']]
 
 
 def q_weighted_ratio(df):
     # Create a df with columns delta_vis, delta_data, and relative_weight
-    df['q_w_ratio'] = df['weight'] * (1 - df['delta_vis']) / (1 - df['delta_data'])
-    return df[['id', 'q_w_ratio']]
+    N = len(df)
+    df['q_w_ratio'] = (1 - (N * df['weight'] * df['delta_vis'])) / (1 - df['delta_data'])
+    return df[['q_w_ratio']]
 
 
 def q_mod(df):
     df['q_mod'] = 1 - abs(df['delta_vis'] - df['delta_data'])
-    return df[['id', 'q_mod']]
+    return df[['q_mod']]
 
 
 def q_weighted_mod(df):
     df['q_w_mod'] = df['weight'] * (1 - abs(df['delta_vis'] - df['delta_data']))
-    return df[['id', 'q_w_mod']]
+    return df[['q_w_mod']]
 
 
 def pearson(df):
@@ -85,10 +87,10 @@ def delta_vis(df1, df2):
     # Normalize by 4 * hypotenuse
     norm = 4 * math.sqrt(base_width ** 2 + base_height ** 2)
 
-    df = pd.merge(df1, df2, on='id', how='outer')
-    df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
+    df = pd.merge(df1, df2, how='outer', left_index=True, right_index=True)
+    df.columns = ['x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
     df['delta_vis'] = df.apply(lambda r: corner_travel(*list(r)) / norm, axis=1)
-    return df[['id', 'delta_vis']]
+    return df[['delta_vis']]
 
 
 def delta_data_by_area(df1, df2):
@@ -97,11 +99,10 @@ def delta_data_by_area(df1, df2):
     # Normalize by base area
     norm = base_height * base_width
 
-    df = pd.merge(df1, df2, on='id', how='outer')
-    df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
+    df = pd.merge(df1, df2, how='outer', left_index=True, right_index=True)
+    df.columns = ['x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
     df['delta_data'] = df.apply(lambda r: area_change(*list(r)) / norm, axis=1)
-    return df[['id', 'delta_data']]
-
+    return df[['delta_data']]
 
 # Given by the average of the two areas
 def relative_weight(df1, df2):
@@ -114,10 +115,10 @@ def relative_weight(df1, df2):
     base_height2 = (df2['y'] + df2['h']).max()
     area2 = base_height2 * base_width2
 
-    df = pd.merge(df1, df2, on='id', how='outer')
-    df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
+    df = pd.merge(df1, df2, how='outer', left_index=True, right_index=True)
+    df.columns = ['x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
     df['weight'] = df.apply(lambda r: relative_weight_mean(*list(r), area1, area2), axis=1)
-    return df[['id', 'weight']]
+    return df[['weight']]
 
 
 # If the precision of rectangles is good enough, this shouldn't be necessary
@@ -130,7 +131,7 @@ def point_distance(x1, y1, x2, y2):
 
 
 def corner_travel(*args):
-    _, x1, y1, w1, h1, x2, y2, w2, h2 = args
+    x1, y1, w1, h1, x2, y2, w2, h2 = args
     if math.isnan(w1):
         # 2 times the hypotenuse -- growth from center
         return 2 * math.sqrt(w2 ** 2 + h2 ** 2)
@@ -144,7 +145,7 @@ def corner_travel(*args):
 
 
 def area_change(*args):
-    _, x1, y1, w1, h1, x2, y2, w2, h2 = args
+    x1, y1, w1, h1, x2, y2, w2, h2 = args
     if math.isnan(w1):
         return w2 * h2
     elif math.isnan(w2):
@@ -154,7 +155,7 @@ def area_change(*args):
 
 
 def relative_weight_mean(*args):
-    _, x1, y1, w1, h1, x2, y2, w2, h2, area1, area2 = args
+    x1, y1, w1, h1, x2, y2, w2, h2, area1, area2 = args
     if math.isnan(w1):
         return ((w2 * h2) / area2) / 2
     elif math.isnan(w2):
@@ -168,38 +169,41 @@ def relative_weight_mean(*args):
 #  - Contains a list of the rectangles in the current and in the new iteration. Only those rectangles present in both are there
 #    a object in the list should contain "x1","x2","y1","y2" values
 def relative_position_change_wrapper(df1, df2):
-    df = pd.merge(df1, df2, on='id', how='inner')  # Retain only rows in both sets
-    df.columns = ['id', 'x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
-    l1 = df[['x1', 'y1', 'w1', 'h1']].copy()
-    l1['w1'] = df['x1'] + df['w1']
-    l1['h1'] = df['y1'] + df['h1']
-    l1.columns = ['x1', 'y1', 'x2', 'y2']
+    df = pd.merge(df1, df2, how='inner', left_index=True, right_index=True)  # Retain only rows in both sets
+    df.columns = ['x1', 'y1', 'w1', 'h1', 'x2', 'y2', 'w2', 'h2']
+    df['w1'] = df['x1'] + df['w1']
+    df['h1'] = df['y1'] + df['h1']
 
-    l2 = df[['x2', 'y2', 'w2', 'h2']].copy()
-    l2['w2'] = df['x2'] + df['w2']
-    l2['h2'] = df['y2'] + df['h2']
-    l2.columns = ['x1', 'y1', 'x2', 'y2']
+    df['w2'] = df['x2'] + df['w2']
+    df['h2'] = df['y2'] + df['h2']
 
-    score = getRelativeScore(l1, l2)
-    return score
+    # Coords from 1st revision and coords from 2nd revision
+    df.columns = ['x11', 'y11', 'x12', 'y12', 'x21', 'y21', 'x22', 'y22']
+
+    df = get_relative_score(df)
+    return df
 
 
-def getRelativeScore(listR1, listR2):
-    stability = 0
+def get_relative_score(df):
+    N = len(df)
+    df['rpc'] = pd.Series(np.zeros(N), index=df.index)
 
-    for i, r1 in listR1.iterrows():
-        for j, r2 in listR1.iterrows():
-            if (i != j):
-                oldPercentage = getRelativePositions(r1['x1'], r1['x2'], r1['y1'], r1['y2'],
-                                                     r2['x1'], r2['x2'], r2['y1'], r2['y2'])
-                newPercentage = getRelativePositions(listR2.iloc[i]['x1'], listR2.iloc[i]['x2'], listR2.iloc[i]['y1'], listR2.iloc[i]['y2'],
-                                                     listR2.iloc[j]['x1'], listR2.iloc[j]['x2'], listR2.iloc[j]['y1'], listR2.iloc[j]['y2'])
-                itemStability = getQuadrantStability(oldPercentage, newPercentage)
-                stability += itemStability
+    revision_stability = 0
+    for i, r1 in df.iterrows():
+        item_stability = 0
+        for j, r2 in df.iterrows():
+            if i != j:
+                old_percentage = getRelativePositions(r1['x11'], r1['x12'], r1['y11'], r1['y12'],
+                                                      r2['x11'], r2['x12'], r2['y11'], r2['y12'])
+                new_percentage = getRelativePositions(r1['x21'], r1['x22'], r1['y21'], r1['y22'],
+                                                      r2['x21'], r2['x22'], r2['y21'], r2['y22'])
+                pair_stability = getQuadrantStability(old_percentage, new_percentage)
+                item_stability += pair_stability
+                revision_stability += pair_stability
+        r1['rpc'] = item_stability / (N - 1)
 
-    items = len(listR1)
-    stability = stability / (pow(items, 2) - items)
-    return stability
+    # revision_stability = revision_stability / (pow(N, 2) - N)
+    return df
 
 
 def getQuadrantStability(percentagesOld, percentagesNew):

@@ -24,7 +24,7 @@ def parse_rectangles(technique_id, dataset_id):
     files = [filename for filename in glob.iglob(path + '**/*.rect', recursive=True)]
     files = natural_sort(files)
     # Read each file into a dataframe
-    dfs = [pd.read_csv(file, names=['id', 'x', 'y', 'w', 'h']) for file in files]
+    dfs = [pd.read_csv(file, names=['id', 'x', 'y', 'w', 'h'], index_col='id') for file in files]
     return dfs
 
 

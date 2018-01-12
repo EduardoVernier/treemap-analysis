@@ -1,0 +1,868 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{RankTable}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k}{import} \PY{n}{stats}
+        \PY{k+kn}{import} \PY{n+nn}{sys}
+        \PY{k+kn}{import} \PY{n+nn}{math}
+        \PY{n}{sys}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/home/eduardo/PycharmProjects/treemap\PYZhy{}analysis/code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{k+kn}{import} \PY{n+nn}{Parser}
+        \PY{k+kn}{import} \PY{n+nn}{SpatialMetrics}
+        \PY{k+kn}{import} \PY{n+nn}{TemporalMetrics}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{technique\PYZus{}list} \PY{o}{=} \PY{n}{Parser}\PY{o}{.}\PY{n}{list\PYZus{}techniques}\PY{p}{(}\PY{p}{)}
+        \PY{n}{dataset\PYZus{}list} \PY{o}{=} \PY{n}{Parser}\PY{o}{.}\PY{n}{list\PYZus{}datasets}\PY{p}{(}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{technique\PYZus{}list}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{dataset\PYZus{}list}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['app', 'git', 'hil', 'moo', 'nac', 'new', 'pbm', 'pbs', 'pbz', 'snd', 'spi', 'sqr', 'str']
+['animate.css', 'AudioKit', 'bdb', 'beets', 'brackets', 'caffe', 'calcuta', 'cpython', 'earthdata-search', 'emcee', 'exo', 'exports', 'fsharp', 'gimp', 'hiv', 'hospitalrun-frontend', 'Hystrix', 'iina', 'jenkins', 'Leaflet', 'm-coffee', 'm-names', 'OptiKey', 'osquery', 'PhysicsJS', 'pybuilder', 'scikitlearn', 'shellcheck', 'soundnode-app', 'spacemacs', 'standard', 'uws']
+
+    \end{Verbatim}
+
+    \section{Visual Metrics}\label{visual-metrics}
+
+Let \(w_k\) and \(h_k\) be the weight and height of cell \(c_k\), and
+\(a_k\) be the relative weight of item \(k\) relative to the complete
+tree weight.
+
+\(Q^{AR}_k = \min(w_k,h_k)/\max(w_k,h_k)\)
+
+\(Q^{WAR}_k = a_k * Q^{AR}_k\)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{c+c1}{\PYZsh{} If the metrics were already computed, read from file. Else, recompute and save to file.}
+         \PY{k}{try}\PY{p}{:}
+             \PY{n}{ar\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ar.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             \PY{n}{war\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{war.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             
+         \PY{k}{except}\PY{p}{:}
+             \PY{n}{ar\PYZus{}df}  \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{c+c1}{\PYZsh{} Aspect ratio dataframe}
+             \PY{n}{war\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{c+c1}{\PYZsh{} Weighted aspect ratio dataframe}
+             \PY{k}{for} \PY{n}{technique} \PY{o+ow}{in} \PY{n}{technique\PYZus{}list}\PY{p}{:}
+                 \PY{k}{for} \PY{n}{dataset} \PY{o+ow}{in} \PY{n}{dataset\PYZus{}list}\PY{p}{:}
+                     \PY{n}{history} \PY{o}{=} \PY{n}{Parser}\PY{o}{.}\PY{n}{parse\PYZus{}rectangles}\PY{p}{(}\PY{n}{technique}\PY{p}{,} \PY{n}{dataset}\PY{p}{)}
+                     \PY{k}{for} \PY{n}{i}\PY{p}{,} \PY{n}{df} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{history}\PY{p}{)}\PY{p}{:}
+                         \PY{n}{ar\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]}  \PY{o}{=} \PY{n}{SpatialMetrics}\PY{o}{.}\PY{n}{q\PYZus{}ar}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q\PYZus{}ar}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+                         \PY{n}{war\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]} \PY{o}{=} \PY{n}{SpatialMetrics}\PY{o}{.}\PY{n}{q\PYZus{}weighted\PYZus{}ar}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q\PYZus{}w\PYZus{}ar}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+         
+             \PY{n}{ar\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ar.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ar\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{war.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}    
+\end{Verbatim}
+
+
+    \subsubsection{\texorpdfstring{How much each technique in \(Q^{ar}\)
+score for each
+dataset}{How much each technique in Q\^{}\{ar\} score for each dataset}}\label{how-much-each-technique-in-qar-score-for-each-dataset}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{ar\PYZus{}df}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}32}]:}      animate.css  AudioKit       bdb     beets  brackets     caffe   calcuta  \textbackslash{}
+         app     0.684565  0.659055  0.445995  0.662962  0.635311  0.690907  0.603092   
+         git     0.461645  0.454805  0.251037  0.400137  0.392522  0.453855  0.433477   
+         hil     0.630774  0.435393  0.332571  0.479805  0.303583  0.370615  0.389041   
+         moo     0.629194  0.368385  0.255870  0.416297  0.334311  0.251678  0.448974   
+         nac     0.551992  0.398819  0.286815  0.343779  0.319154  0.395018  0.373129   
+         new     0.667569  0.567579  0.335528  0.530474  0.520653  0.554568  0.561581   
+         pbm     0.622484  0.550473  0.334689  0.424140  0.495053  0.528365  0.463841   
+         pbs     0.660418  0.614854  0.337120  0.548278  0.475022  0.594930  0.459847   
+         pbz     0.673360  0.553062  0.344971  0.517480  0.524025  0.550637  0.527375   
+         snd     0.518291  0.114074  0.228111  0.108170  0.191458  0.150805  0.209768   
+         spi     0.682016  0.570650  0.338109  0.495522  0.496187  0.547150  0.510695   
+         sqr     0.701341  0.629063  0.346323  0.510328  0.551383  0.610560  0.605379   
+         str     0.696297  0.536034  0.308877  0.460061  0.444030  0.516935  0.471907   
+         
+               cpython  earthdata-search     emcee    {\ldots}      OptiKey   osquery  \textbackslash{}
+         app  0.684429          0.666995  0.681847    {\ldots}     0.562277  0.675816   
+         git  0.317625          0.212654  0.344499    {\ldots}     0.395375  0.474618   
+         hil  0.336044          0.383148  0.465973    {\ldots}     0.462930  0.341557   
+         moo  0.408120          0.199319  0.513805    {\ldots}     0.462930  0.412599   
+         nac  0.360574          0.296851  0.390329    {\ldots}     0.336626  0.401643   
+         new  0.521457          0.497821  0.508860    {\ldots}     0.535917  0.552576   
+         pbm  0.488546          0.487231  0.505689    {\ldots}     0.448904  0.528203   
+         pbs  0.551530          0.541601  0.591333    {\ldots}     0.562277  0.569044   
+         pbz  0.548549          0.533954  0.513561    {\ldots}     0.506441  0.548509   
+         snd  0.116347          0.097881  0.361535    {\ldots}     0.273351  0.214281   
+         spi  0.425696          0.472745  0.473459    {\ldots}     0.468165  0.529582   
+         sqr  0.508812          0.560822  0.540124    {\ldots}     0.544390  0.585195   
+         str  0.406375          0.420774  0.486297    {\ldots}     0.487119  0.496510   
+         
+              PhysicsJS  pybuilder  scikitlearn  shellcheck  soundnode-app  spacemacs  \textbackslash{}
+         app   0.650434   0.710802     0.665772    0.668284       0.687974   0.626794   
+         git   0.363336   0.527232     0.274224    0.484265       0.370244   0.421906   
+         hil   0.332893   0.378496     0.422687    0.256631       0.436462   0.406484   
+         moo   0.368525   0.284382     0.437752    0.227899       0.458906   0.396532   
+         nac   0.423617   0.385819     0.355646    0.387849       0.389500   0.388563   
+         new   0.572394   0.566798     0.528815    0.606800       0.558541   0.495402   
+         pbm   0.507423   0.533881     0.511144    0.328786       0.473934   0.482408   
+         pbs   0.552945   0.574005     0.537025    0.589508       0.561601   0.537996   
+         pbz   0.524762   0.583160     0.532376    0.417262       0.561040   0.480250   
+         snd   0.282249   0.025534     0.223167    0.100708       0.150015   0.209306   
+         spi   0.496318   0.557135     0.498248    0.410072       0.533089   0.480990   
+         sqr   0.541216   0.602088     0.572405    0.623986       0.569534   0.552169   
+         str   0.482275   0.526554     0.456548    0.483723       0.496278   0.461774   
+         
+              standard       uws  
+         app  0.739188  0.701980  
+         git  0.413298  0.356951  
+         hil  0.413442  0.400631  
+         moo  0.359182  0.477957  
+         nac  0.315709  0.353041  
+         new  0.275742  0.477449  
+         pbm  0.367774  0.476632  
+         pbs  0.463491  0.548236  
+         pbz  0.473946  0.475757  
+         snd  0.270424  0.198423  
+         spi  0.468071  0.428694  
+         sqr  0.463491  0.531607  
+         str  0.447256  0.360890  
+         
+         [13 rows x 32 columns]
+\end{Verbatim}
+            
+    \subsubsection{\texorpdfstring{Count and sort ranks for \(Q^{ar}\) and
+\(Q^{war}\)}{Count and sort ranks for Q\^{}\{ar\} and Q\^{}\{war\}}}\label{count-and-sort-ranks-for-qar-and-qwar}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}109}]:} \PY{n}{ar\PYZus{}rank\PYZus{}count} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{columns}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{ar\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{ar\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{ar\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+          
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{war\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{ar\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{ar\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+              
+          \PY{n}{ar\PYZus{}rank\PYZus{}count}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}109}]:}      1   2   3   4   5   6   7   8   9   10  11  12  13
+          app  54   6   2   2   0   0   0   0   0   0   0   0   0
+          git   0   0   0   0   2   0   0   4  18   4  18  14   4
+          hil   0   0   2   0   0   2   6  12   4  14  12  12   0
+          moo   0   2   0   4   0   2   2   2  14  18   8  10   2
+          nac   0   0   0   0   0   0   0   0   6  12  24  22   0
+          new   0   6  10  12  18  10   0   4   0   0   2   2   0
+          pbm   0   0   0   0   6  22  18   6   6   6   0   0   0
+          pbs   0  12  26  14   4   2   4   2   0   0   0   0   0
+          pbz   0   2  14  22  12   4   6   0   2   2   0   0   0
+          snd   0   0   0   0   0   0   0   0   0   2   0   4  58
+          spi   0   0   4   8   8  12  18   6   8   0   0   0   0
+          sqr  10  34   6   2  12   0   0   0   0   0   0   0   0
+          str   0   2   0   0   2  10  10  28   6   6   0   0   0
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}110}]:} \PY{k}{def} \PY{n+nf}{rank\PYZus{}row}\PY{p}{(}\PY{n}{row}\PY{p}{)}\PY{p}{:}
+              \PY{n}{value} \PY{o}{=} \PY{l+m+mi}{0}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{n\PYZus{}times} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{row}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{value} \PY{o}{+}\PY{o}{=} \PY{p}{(}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{n\PYZus{}times}
+              \PY{k}{return} \PY{n}{value}
+              
+          \PY{n}{ar\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{avg}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{ar\PYZus{}rank\PYZus{}count}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{row}\PY{p}{:} \PY{n}{rank\PYZus{}row}\PY{p}{(}\PY{n}{row}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+          \PY{n}{ar\PYZus{}rank\PYZus{}count}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{avg}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}110}]:}       1   2   3   4   5   6   7   8   9  10  11  12  13  avg
+          app  54   6   2   2   0   0   0   0   0   0   0   0   0   80
+          sqr  10  34   6   2  12   0   0   0   0   0   0   0   0  164
+          pbs   0  12  26  14   4   2   4   2   0   0   0   0   0  234
+          pbz   0   2  14  22  12   4   6   0   2   2   0   0   0  298
+          new   0   6  10  12  18  10   0   4   0   0   2   2   0  318
+          spi   0   0   4   8   8  12  18   6   8   0   0   0   0  402
+          pbm   0   0   0   0   6  22  18   6   6   6   0   0   0  450
+          str   0   2   0   0   2  10  10  28   6   6   0   0   0  482
+          moo   0   2   0   4   0   2   2   2  14  18   8  10   2  602
+          hil   0   0   2   0   0   2   6  12   4  14  12  12   0  608
+          git   0   0   0   0   2   0   0   4  18   4  18  14   4  662
+          nac   0   0   0   0   0   0   0   0   6  12  24  22   0  702
+          snd   0   0   0   0   0   0   0   0   0   2   0   4  58  822
+\end{Verbatim}
+            
+    \section{Stability Metrics}\label{stability-metrics}
+
+Let \(c_k(t_i)\) and \(c_k(t_j)\) be two cells in two consecutive
+versions \(T(t_i)\) and \(T(t_j=t_{i+1})\) for the same node in a
+dynamic tree. We use for \(\delta c_k\) the average sum of distances
+between the four closest corresponding corners of \(c_k(t_i)\) and
+\(c_k(t_j)\), normalized by the treemap diagonal \(\sqrt{W^2+H^2}\), so
+\(\delta \in [0,1]\).
+
+We next define the \emph{data change} between nodes \(n_k(t_i)\) and
+\(n_k(t_j)\) as \(\delta a_k = |a_k(t_i)-a_k(t_j)|\), where \(a_k\) is
+the data attribute of \(n_k\). If either of \(n_k(t_i)\) or \(n_k(t_j)\)
+does not exist, \emph{i.e.}, a node was created or deleted in versions
+\(t_i\) or \(t_j\), we set the respective attribute to zero. We
+normalize \(\delta a_k\) by the maximal \(a_k(t_i)\) for all nodes
+\(n_k\) in all versions \(t_j\) in a dataset, so
+\(\delta a_k \in [0,1]\).
+
+\(Q^{RATIO}_k = (1-\delta c_k) / (1 - \delta a_k)\)
+
+\(Q^{WRATIO}_k = a_k * Q^{RATIO}_k\)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{k}{try}\PY{p}{:}
+             \PY{n}{ratio\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ratio.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             \PY{n}{wratio\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{wratio.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             \PY{n}{p\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             \PY{n}{wp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{wp.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+             
+         \PY{k}{except}\PY{p}{:}
+             \PY{n}{ratio\PYZus{}df}  \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{c+c1}{\PYZsh{} Ratio dataframe}
+             \PY{n}{wratio\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{c+c1}{\PYZsh{} Weighted ratio dataframe}
+             \PY{n}{p\PYZus{}df}  \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)}     \PY{c+c1}{\PYZsh{} Pearson correlation dataframe}
+             \PY{n}{wp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{dataset\PYZus{}list}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)}     \PY{c+c1}{\PYZsh{} Weighted Pearson correlation dataframe}
+             
+             \PY{k}{for} \PY{n}{technique} \PY{o+ow}{in} \PY{n}{technique\PYZus{}list}\PY{p}{:}
+                 \PY{k}{for} \PY{n}{dataset} \PY{o+ow}{in} \PY{n}{dataset\PYZus{}list}\PY{p}{:}
+                     \PY{n}{history} \PY{o}{=} \PY{n}{Parser}\PY{o}{.}\PY{n}{parse\PYZus{}rectangles}\PY{p}{(}\PY{n}{technique}\PY{p}{,} \PY{n}{dataset}\PY{p}{)}
+                     \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{history}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                         \PY{n}{df} \PY{o}{=} \PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{delta\PYZus{}vis}\PY{p}{(}\PY{n}{history}\PY{p}{[}\PY{n}{i} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{history}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+                         \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{merge}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{delta\PYZus{}data\PYZus{}by\PYZus{}area}\PY{p}{(}\PY{n}{history}\PY{p}{[}\PY{n}{i} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{history}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                         \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{merge}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{relative\PYZus{}weight}\PY{p}{(}\PY{n}{history}\PY{p}{[}\PY{n}{i} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{history}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         
+                         \PY{c+c1}{\PYZsh{} ratio metric}
+                         \PY{n}{ratio\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]}  \PY{o}{=} \PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{q\PYZus{}ratio}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q\PYZus{}ratio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+                         \PY{n}{wratio\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]} \PY{o}{=} \PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{q\PYZus{}weighted\PYZus{}ratio}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q\PYZus{}w\PYZus{}ratio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+                         
+                         \PY{c+c1}{\PYZsh{} pearson correlation}
+                         \PY{n}{p\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]}  \PY{o}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{pearson}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}
+                         \PY{n}{wp\PYZus{}df}\PY{p}{[}\PY{n}{dataset}\PY{p}{]}\PY{p}{[}\PY{n}{technique}\PY{p}{]} \PY{o}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n}{TemporalMetrics}\PY{o}{.}\PY{n}{weighted\PYZus{}pearson}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}
+         
+             \PY{n}{ratio\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ratio.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{wratio\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{wratio.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{p\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{wp\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{wp.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/usr/lib/python3/dist-packages/scipy/stats/stats.py:3003: RuntimeWarning: invalid value encountered in double\_scalars
+  r = r\_num / r\_den
+/home/eduardo/PycharmProjects/treemap-analysis/code/TemporalMetrics.py:78: RuntimeWarning: invalid value encountered in double\_scalars
+  weighted\_correlation = xy\_weighted\_covariance / math.sqrt(xx\_weighted\_covariance * yy\_weighted\_covariance)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{ratio\PYZus{}df}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}36}]:}     animate.css  AudioKit       bdb     beets brackets     caffe   calcuta  \textbackslash{}
+         app    0.953005  0.999616  0.999923  0.998439        1  0.991312    0.9522   
+         git    0.932883  0.999631  0.999934  0.999682        1  0.998684  0.973433   
+         hil    0.993526  0.999418  0.999931  0.999709        1  0.995722  0.955108   
+         moo     0.99234  0.999474  0.999928  0.999664        1  0.993395  0.963774   
+         nac     0.94113  0.999393  0.999937  0.999694        1  0.998675  0.964919   
+         new    0.916109  0.999587  0.999939  0.999177        1  0.997699  0.962751   
+         pbm    0.924394  0.637792  0.999936  0.999809        1  0.998357  0.972708   
+         pbs    0.990388  0.999485  0.999931  0.990486        1  0.992834  0.966799   
+         pbz    0.897265  0.999658  0.999934  0.999752        1  0.995984  0.950506   
+         snd    0.942571  0.999308  0.999946  0.999786        1  0.999013  0.975645   
+         spi    0.906358  0.997956  0.999938  0.999514        1  0.997209  0.962916   
+         sqr    0.674018  0.999689  0.999925  0.999738        1  0.993768  0.971914   
+         str    0.753434  0.999593  0.999946  0.996891        1  0.986273  0.950429   
+         
+               cpython earthdata-search emcee    {\ldots}      OptiKey   osquery PhysicsJS  \textbackslash{}
+         app  0.997972         0.998051     1    {\ldots}            1  0.999187         1   
+         git  0.999748         0.999129     1    {\ldots}     0.995266  0.998984         1   
+         hil  0.995303         0.999167     1    {\ldots}            1  0.998953         1   
+         moo  0.995833         0.998778     1    {\ldots}            1   0.99867         1   
+         nac  0.999818         0.998865     1    {\ldots}     0.988114  0.999341         1   
+         new  0.996057         0.999132     1    {\ldots}     0.972212  0.999056         1   
+         pbm  0.999816          0.99865     1    {\ldots}     0.974949  0.999398         1   
+         pbs  0.988545         0.996741     1    {\ldots}            1  0.998245         1   
+         pbz  0.996813         0.996118     1    {\ldots}      0.99054  0.998741         1   
+         snd   0.99978         0.999055     1    {\ldots}      0.99579  0.999116         1   
+         spi  0.999674         0.992781     1    {\ldots}     0.993005  0.998289         1   
+         sqr  0.999749         0.998647     1    {\ldots}     0.985485  0.996196         1   
+         str  0.999271         0.998621     1    {\ldots}     0.985715  0.998926         1   
+         
+             pybuilder scikitlearn shellcheck soundnode-app spacemacs standard  \textbackslash{}
+         app         1    0.997451   0.979447             1  0.942215        1   
+         git  0.999927    0.999366   0.998542             1  0.977415        1   
+         hil         1    0.999075   0.999201             1  0.962458        1   
+         moo         1    0.999126   0.999305             1   0.95307        1   
+         nac  0.999917    0.999505   0.999186             1  0.977074        1   
+         new  0.999931    0.999348   0.999381             1  0.897226        1   
+         pbm  0.999957    0.994152   0.998634             1  0.964173        1   
+         pbs         1    0.999335   0.999113             1  0.967561        1   
+         pbz  0.999912    0.999299   0.998896             1  0.955468        1   
+         snd  0.999969    0.999555    0.99904             1  0.970755        1   
+         spi   0.99992    0.999405   0.998947             1  0.780643        1   
+         sqr  0.999935    0.999345   0.999214             1  0.797743        1   
+         str  0.999916    0.999463   0.998538             1  0.864726        1   
+         
+                   uws  
+         app  0.970716  
+         git  0.999328  
+         hil  0.999021  
+         moo  0.999135  
+         nac  0.999083  
+         new  0.999431  
+         pbm  0.999045  
+         pbs  0.975915  
+         pbz  0.985857  
+         snd  0.999211  
+         spi  0.999395  
+         sqr  0.999423  
+         str  0.999016  
+         
+         [13 rows x 32 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}118}]:} \PY{n}{stab\PYZus{}rank\PYZus{}count} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{columns}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{technique\PYZus{}list}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{technique\PYZus{}list}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{ratio\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{ratio\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+          
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{wratio\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{wratio\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+                  
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{p\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{p\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+          
+          \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{wp\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{wp\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{n}{rank} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n}{tech}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+              
+          \PY{n}{stab\PYZus{}rank\PYZus{}count}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}118}]:}      1   2   3   4   5   6   7   8   9   10  11  12  13
+          app  36  10   9   9   4   2   2   4   7  14  13   8  10
+          git  20  28  16   9   8  10   7   4   6   4   6   4   6
+          hil  14  14  25   8   6   8   5  14   8   5   9   7   5
+          moo   7  11  13  26   5  10  14   7  10   9   7   9   0
+          nac   5  19  15   8  29  15   6   8   5   8   7   1   2
+          new   3   5   6   7  12  26  11  14  12  15   8   3   6
+          pbm   6   7   7  12  15  13  29   7   3  11   2   7   9
+          pbs   4   3  10  16   6   9  10  25  11   9   9   6  10
+          pbz   7   4   5   5   5   7  13  13  35   4  10  14   6
+          snd  16  17   7  11  12   8   9   5   6  27   2   5   3
+          spi   4   1  10   6  10  10   7  11   5  10  35  11   8
+          sqr   5   7   3   4   5   6   8   8  10   4   9  40  19
+          str   1   2   2   7  11   4   7   8  10   8  11  13  44
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}119}]:} \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{avg}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{row}\PY{p}{:} \PY{n}{rank\PYZus{}row}\PY{p}{(}\PY{n}{row}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+          \PY{n}{stab\PYZus{}rank\PYZus{}count}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{avg}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}119}]:}       1   2   3   4   5   6   7   8   9  10  11  12  13   avg
+          git  20  28  16   9   8  10   7   4   6   4   6   4   6   627
+          nac   5  19  15   8  29  15   6   8   5   8   7   1   2   701
+          hil  14  14  25   8   6   8   5  14   8   5   9   7   5   744
+          app  36  10   9   9   4   2   2   4   7  14  13   8  10   769
+          snd  16  17   7  11  12   8   9   5   6  27   2   5   3   771
+          moo   7  11  13  26   5  10  14   7  10   9   7   9   0   776
+          pbm   6   7   7  12  15  13  29   7   3  11   2   7   9   861
+          new   3   5   6   7  12  26  11  14  12  15   8   3   6   924
+          pbs   4   3  10  16   6   9  10  25  11   9   9   6  10   948
+          pbz   7   4   5   5   5   7  13  13  35   4  10  14   6  1023
+          spi   4   1  10   6  10  10   7  11   5  10  35  11   8  1073
+          sqr   5   7   3   4   5   6   8   8  10   4   9  40  19  1181
+          str   1   2   2   7  11   4   7   8  10   8  11  13  44  1250
+\end{Verbatim}
+            
+    \subsubsection{The APP technique looks suspicious. Very low value
+compared to the others, and, eventhough I don't know much about it, I
+believe it is a very unstable technique. Maybe there is an
+implementation
+issue.}\label{the-app-technique-looks-suspicious.-very-low-value-compared-to-the-others-and-eventhough-i-dont-know-much-about-it-i-believe-it-is-a-very-unstable-technique.-maybe-there-is-an-implementation-issue.}
+
+\subsubsection{Lets see for which datasets it ranks
+high.}\label{lets-see-for-which-datasets-it-ranks-high.}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}126}]:} \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{n}{ratio\PYZus{}df}\PY{p}{:}
+              \PY{n}{df} \PY{o}{=} \PY{n}{ratio\PYZus{}df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{by}\PY{o}{=}\PY{n}{column}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{[}\PY{n}{column}\PY{p}{]}
+              \PY{k}{for} \PY{n}{rank}\PY{p}{,} \PY{n}{tech} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{values}\PY{p}{)}\PY{p}{:}
+                  \PY{k}{if} \PY{n}{rank} \PY{o}{==} \PY{l+m+mi}{0} \PY{o+ow}{and} \PY{n}{tech} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{app}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                      \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{p}{)}
+                      \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+app    1
+git    1
+hil    1
+moo    1
+nac    1
+new    1
+pbm    1
+pbs    1
+pbz    1
+snd    1
+spi    1
+sqr    1
+str    1
+Name: brackets, dtype: object
+
+app    1
+git    1
+hil    1
+moo    1
+new    1
+pbm    1
+pbs    1
+pbz    1
+snd    1
+spi    1
+sqr    1
+str    1
+nac    1
+Name: emcee, dtype: object
+
+app           1
+hil           1
+moo           1
+nac           1
+new           1
+pbm           1
+pbs           1
+pbz           1
+snd           1
+spi           1
+sqr           1
+str           1
+git    0.998896
+Name: fsharp, dtype: object
+
+app    0.998354
+git     0.99769
+nac    0.997282
+hil    0.997236
+pbs    0.996703
+sqr    0.996615
+moo    0.996612
+spi    0.996543
+pbz    0.996472
+pbm    0.996465
+new    0.996027
+snd    0.993764
+str    0.977137
+Name: iina, dtype: object
+
+app    0.998829
+snd     0.99805
+git    0.997347
+sqr    0.993673
+pbm     0.99238
+spi    0.992106
+str    0.990784
+new    0.988418
+pbz    0.988253
+nac    0.988002
+pbs    0.986101
+moo    0.980023
+hil    0.977563
+Name: Leaflet, dtype: object
+
+app           1
+hil           1
+moo           1
+pbs           1
+snd     0.99579
+git    0.995266
+spi    0.993005
+pbz     0.99054
+nac    0.988114
+str    0.985715
+sqr    0.985485
+pbm    0.974949
+new    0.972212
+Name: OptiKey, dtype: object
+
+app    1
+git    1
+hil    1
+moo    1
+nac    1
+new    1
+pbm    1
+pbs    1
+pbz    1
+snd    1
+spi    1
+sqr    1
+str    1
+Name: PhysicsJS, dtype: object
+
+app           1
+hil           1
+moo           1
+pbs           1
+snd    0.999969
+pbm    0.999957
+sqr    0.999935
+new    0.999931
+git    0.999927
+spi     0.99992
+nac    0.999917
+str    0.999916
+pbz    0.999912
+Name: pybuilder, dtype: object
+
+app    1
+git    1
+hil    1
+moo    1
+nac    1
+new    1
+pbm    1
+pbs    1
+pbz    1
+snd    1
+spi    1
+sqr    1
+str    1
+Name: soundnode-app, dtype: object
+
+app    1
+git    1
+hil    1
+moo    1
+nac    1
+new    1
+pbm    1
+pbs    1
+pbz    1
+snd    1
+spi    1
+sqr    1
+str    1
+Name: standard, dtype: object
+
+
+    \end{Verbatim}
+
+    \subsubsection{It looks like the precision is not enough, whenever
+values get rounded to 1, it uses alphabetical order to rank indexes,
+putting APP at the top. I'll try to fix it
+next.}\label{it-looks-like-the-precision-is-not-enough-whenever-values-get-rounded-to-1-it-uses-alphabetical-order-to-rank-indexes-putting-app-at-the-top.-ill-try-to-fix-it-next.}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

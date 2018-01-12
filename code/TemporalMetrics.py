@@ -32,9 +32,16 @@ import Parser
 #     return df_mean.T, pearson_list, weighted_pearson_list
 
 
-def q_ratio(df):
+def q_1_minus_ratio(df):
     # Create a df with columns delta_vis and delta_data
     df['q_ratio'] = (1 - df['delta_vis']) / (1 - df['delta_data'])
+    df['q_ratio'] = df['q_ratio'].fillna(1)
+    return df[['q_ratio']]
+
+def q_ratio(df):
+    # Create a df with columns delta_vis and delta_data
+    df['q_ratio'] = df['delta_data'] / df[['delta_data', 'delta_vis']].max(axis=1)
+    df['q_ratio'] = df['q_ratio'].fillna(1)
     return df[['q_ratio']]
 
 
@@ -181,12 +188,12 @@ def relative_position_change_wrapper(df1, df2):
     df.columns = ['x11', 'y11', 'x12', 'y12', 'x21', 'y21', 'x22', 'y22']
 
     df = get_relative_score(df)
-    return df
+    return df[['delta_vis']]
 
 
 def get_relative_score(df):
     N = len(df)
-    df['rpc'] = pd.Series(np.zeros(N), index=df.index)
+    df['delta_vis'] = pd.Series(np.zeros(N), index=df.index)
 
     revision_stability = 0
     for i, r1 in df.iterrows():
@@ -200,7 +207,7 @@ def get_relative_score(df):
                 pair_stability = getQuadrantStability(old_percentage, new_percentage)
                 item_stability += pair_stability
                 revision_stability += pair_stability
-        r1['rpc'] = item_stability / (N - 1)
+        r1['delta_vis'] = item_stability / (N - 1)
 
     # revision_stability = revision_stability / (pow(N, 2) - N)
     return df
